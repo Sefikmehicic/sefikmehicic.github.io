@@ -23,7 +23,7 @@
                   </div>
             </div>
             <div class="col-auto text-center">
-                <button class="btn btn-primary">Logga in</button>
+                <button class="btn btn-primary" routerLink="/Search">Logga in</button>
             </div>
             <hr class="col-lg-8 offset-lg-2 text-center"/>
             <div class="col-lg-6 offset-lg-3 text-center">
@@ -84,7 +84,7 @@
           </div>
           <hr/>
           <div class="text-center mb-3">
-            <button class="btn btn-outline-primary">Skapa</button>
+            <button class="btn btn-outline-primary" (click)="modalRef?.hide()" routerLink="/Search">Skapa</button>
           </div>
           <div class="text-center">
             <p class="text-danger" (click)="modalRef?.hide()" href="#">Avbryt</p>
