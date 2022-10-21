@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -28,7 +29,7 @@ export class SearchComponent implements OnInit {
         }, 1000)
       }
       else{
-        location.reload();
+        this.NewSearch();
       }
     }
   }
@@ -37,6 +38,12 @@ export class SearchComponent implements OnInit {
       this.showSpinner = true;
       this.result = false;
       this.searchBtnText = 'Ny sökning';
+  }
+
+  NewSearch(){
+    this.result = true;
+    this.searchBtnText = 'Sök';
+    this.userInput = '';
   }
 
   constructor() { }

@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #c8d8e4;
+}
+
 .card{
     -webkit-box-shadow: 0px 0px 10px -5px #000000; 
     box-shadow: 0px 0px 10px -5px #000000;
@@ -8,4 +12,44 @@
     cursor: pointer;
     color: red;
     text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #52ab98;
+    border-color: #52ab98;
+}
+
+.btn-primary:hover {
+    background-color: #418979;
+    border-color: #418979;
+}
+
+.btn-primary:focus {
+    background-color: #52ab98;
+    border-color: #52ab98;
+}
+
+.link{
+    color: #52ab98;
+}
+
+.link:hover {
+    color: #418979;
+}
+
+.link:focus {
+    color: #52ab98;
+}
+
+
+.btn-outline-success {
+    border-color: #52ab98;
+}
+
+.btn-outline-success:hover {
+    background-color: #418979;
+}
+
+.form-control:disabled {
+    opacity: 0.8;
 }
