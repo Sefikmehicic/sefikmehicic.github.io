@@ -25,10 +25,10 @@ export class SearchComponent implements OnInit {
         this.result = true;
         setTimeout(() =>{
           this.ShowResult()
-        }, 200)
+        }, 1000)
       }
       else{
-        location. reload();
+        location.reload();
       }
     }
   }
