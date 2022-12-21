@@ -3,10 +3,10 @@ body{
     background-color: #c8d8e4;
 }
 
-.card{
+/* .card{
     -webkit-box-shadow: 0px 0px 10px -5px #000000; 
     box-shadow: 0px 0px 10px -5px #000000;
-}
+} */
 
 .text-danger{
     cursor: pointer;
