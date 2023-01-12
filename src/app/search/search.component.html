@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="col-auto text-center">
-        <a class="link m-1" routerLink="/Search/History">&#x21ba;{{historyBtnText}}</a>
+        <a class="link m-3" routerLink="/Search/History">&#x21ba;{{historyBtnText}}</a>
         <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
         <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
             <span class="visually-hidden">Loading...</span>
