@@ -4,6 +4,10 @@
     color: black;
 }
 
+.navbar-brand {
+    cursor: pointer;
+}
+
 .router-outlet {
     margin-bottom: 10vh;
 }

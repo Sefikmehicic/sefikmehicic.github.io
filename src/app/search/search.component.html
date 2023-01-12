@@ -1,26 +1,30 @@
 <div class="container mt-5">
-    <div class="">
-        <div class="">
-            <div class="row text-center">
-                <div class="col-lg-6 offset-lg-3">
-                    <h2 class="display-4">Sök på personnummer</h2>
-                </div>
-                <div class="col-lg-6 offset-lg-3">
-                    <p>Här kan du se hur mycker rot- och rutavdrag en person har använt.</p>
-                </div>    
-            </div>
-            <div class="col-lg-6 offset-lg-3 form-group">
-                <div class="mb-3">
-                    <input type="number" [(ngModel)]="userInput" [disabled]="!result" class="form-control form-control-lg text-center" id="floatingInput" placeholder="Personnummer" maxlength="12">
-                    <p class="text-danger text-center" [hidden]="blankInput">Fältet är tomt</p>
-                </div>
-            </div>
-            <div class="col-auto text-center">
-                <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
-                <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>            
+    <div class="row">
+        <div class="col-auto">
+            <button class="btn btn-primary" routerLink="/Search/History">{{historyBtnText}}</button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-6 offset-lg-3">
+            <h2 class="display-4">Sök på personnummer</h2>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+            <p>Här kan du se hur mycker rot- och rutavdrag en person har använt.</p>
+        </div>
+    </div>
+    <div class="col-lg-6 offset-lg-3 form-group">
+        <div class="mb-3">
+            <input type="number" [(ngModel)]="userInput" [disabled]="!result"
+                class="form-control form-control-lg text-center" id="floatingInput" placeholder="Personnummer"
+                maxlength="12">
+            <p class="text-danger text-center" [hidden]="blankInput">Fältet är tomt</p>
+        </div>
+    </div>
+    <div class="col-auto text-center">
+        <button class="btn btn-primary" routerLink="/Search/History">{{historyBtnText}}</button>
+        <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
+        <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 

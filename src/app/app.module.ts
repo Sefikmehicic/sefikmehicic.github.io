@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { SearchComponent } from './search/search.component';
+import { SearchHistoryComponent } from './search-history/search-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    SearchHistoryComponent
   ],
   imports: [
     BrowserModule,

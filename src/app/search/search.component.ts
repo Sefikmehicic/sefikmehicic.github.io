@@ -13,6 +13,8 @@ export class SearchComponent implements OnInit {
   blankInput = true;
   result = true;
   searchBtnText: string = 'Sök'
+  historyBtnText: string = 'Tidigare sökningar'
+  logOutBtnText: string = 'Logga ut'
   userInput: string = '';
 
   Search(){
