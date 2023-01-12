@@ -1,9 +1,4 @@
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-auto">
-            <button class="btn btn-primary" routerLink="/Search/History">{{historyBtnText}}</button>
-        </div>
-    </div>
     <div class="row text-center">
         <div class="col-lg-6 offset-lg-3">
             <h2 class="display-4">Sök på personnummer</h2>
@@ -21,7 +16,7 @@
         </div>
     </div>
     <div class="col-auto text-center">
-        <button class="btn btn-primary" routerLink="/Search/History">{{historyBtnText}}</button>
+        <a class="link m-1" routerLink="/Search/History">&#x21ba;{{historyBtnText}}</a>
         <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
         <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
             <span class="visually-hidden">Loading...</span>
