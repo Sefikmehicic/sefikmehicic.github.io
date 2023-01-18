@@ -1,0 +1,38 @@
+.hero {
+    background-color: #2b6777;
+    color: white;
+}
+
+.hero-text {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.gray-part {
+    background-color: #EFF3F6;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0;
+    border: 0;
+}
+
+.card-body {
+    border-radius: 25px !important;
+}
+
+.bi {
+    color: #2b6777;
+    font-size: 1.5rem;
+}
+
+.point-text {
+    color: #2b6777;
+}
+
+.om-oss {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}

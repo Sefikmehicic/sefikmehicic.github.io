@@ -8,6 +8,11 @@
     cursor: pointer;
 }
 
+.navbar-brand {
+    text-decoration: none;
+    color: inherit;
+}
+
 .router-outlet {
     margin-bottom: 10vh;
 }
@@ -21,4 +26,8 @@
     background-color: #2A6777;
     color: white;
     text-align: center;
+}
+
+.nav-link {
+    color: #2A6777;
 }

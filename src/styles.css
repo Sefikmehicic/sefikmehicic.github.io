@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-icons/font/bootstrap-icons';
 body{
-    background-color: #c8d8e4;
+    background-color: white;
 }
 
 /* .card{
@@ -15,18 +16,18 @@ body{
 }
 
 .btn-primary {
-    background-color: #52ab98;
-    border-color: #52ab98;
+    background-color: #2b6777;
+    border-color: #2b6777;
 }
 
 .btn-primary:hover {
-    background-color: #418979;
-    border-color: #418979;
+    background-color: #1e505e;
+    border-color: #1e505e;
 }
 
 .btn-primary:focus {
-    background-color: #52ab98;
-    border-color: #52ab98;
+    background-color: #2b6777;
+    border-color: #2b6777;
 }
 
 .link{

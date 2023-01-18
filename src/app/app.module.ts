@@ -8,13 +8,15 @@ import { LoginComponent } from './login/login.component';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { SearchComponent } from './search/search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SearchComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
