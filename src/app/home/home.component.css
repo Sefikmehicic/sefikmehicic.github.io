@@ -3,14 +3,14 @@
     color: white;
 }
 
-.hero-text {
+.top-bottom-big-padding {
     padding-top: 10vh;
     padding-bottom: 10vh;
     text-align: center;
 }
 
-.gray-part {
-    background-color: #EFF3F6;
+.gray {
+    background-color: #f3f6f8;
 }
 
 .card {
@@ -34,5 +34,15 @@
 
 .om-oss {
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
+}
+
+.icon {
+    font-size: 8rem;
+}
+
+.icon-section {
+    margin-top: 1vh;
+    padding-top: 1vh;
+    padding-bottom: 5vh;
 }

@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap-icons/font/bootstrap-icons';
 body{
+    position: relative;
+    min-height: 100vh;
     background-color: white;
 }
-
-/* .card{
-    -webkit-box-shadow: 0px 0px 10px -5px #000000; 
-    box-shadow: 0px 0px 10px -5px #000000;
-} */
 
 .text-danger{
     cursor: pointer;

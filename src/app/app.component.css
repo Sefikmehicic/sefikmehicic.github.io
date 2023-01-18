@@ -1,3 +1,7 @@
+.router-outlet {
+    min-height: 100vh;
+}
+
 .navbar {
     background-color: #ffffff;
     padding: 2vh;
@@ -13,16 +17,11 @@
     color: inherit;
 }
 
-.router-outlet {
-    margin-bottom: 10vh;
-}
-
 .footer {
-    padding: 1vh;
-    position:fixed;
-    left: 0;
+    position: relative;
     bottom: 0;
     width: 100%;
+    height: 5vh;
     background-color: #2A6777;
     color: white;
     text-align: center;
