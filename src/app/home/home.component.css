@@ -1,6 +1,13 @@
 .hero {
-    background-color: #2b6777;
-    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sthlm.jpg");
+    height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .top-bottom-big-padding {
