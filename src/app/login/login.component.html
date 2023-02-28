@@ -1,23 +1,15 @@
-<!-- <div class="container-fluid hero">
-  <div class="row">
-    <div class="col-lg-6 offset-lg-3 hero-text">
-      <h1 class="fw-bold">Ett enklare sätt att jobba på</h1>
-      <p class="fs-4">Slipp krångel och fokusera på just det ni är bäst på!</p>
+<div class="container pt-5">
+    <div class="col-auto text-center p-3">
+      <button class="btn btn-primary pt-0 pb-0" routerLink="/Search" id="bankid-button">
+        <img src="../../assets/images/BankID_logo_white.svg" />
+          Logga in med BankID
+            </button>
     </div>
+  <div class="row text-center">
+    <p class="fs-5 hr-lines">eller</p>
   </div>
-</div> -->
-
-<div class="container">
   <div class="col-lg-6 offset-lg-3">
         <div class="">
-            <div class="row text-center">
-                <div class="col-lg-6 offset-lg-3">
-                    <h2 class="display-4">Logga in</h2>
-                </div>
-                <div class="col-lg-6 offset-lg-3">
-                    <p>Ange e-postadress och lösenord för att logga in på ditt konto</p>
-                </div>    
-            </div>
             <div class="col-lg-6 offset-lg-3 form-group">
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -31,12 +23,12 @@
                     <a href="#" class="link">Glömt lösenord?</a>
                   </div>
             </div>
-            <div class="col-auto text-center">
+            <div class="col-auto text-center p-2">
                 <button class="btn btn-primary" routerLink="/Search">Logga in</button>
             </div>
             <hr class="col-lg-8 offset-lg-2 text-center"/>
             <div class="col-lg-6 offset-lg-3 text-center">
-                <h4>Inte medlem på ROTUR än?</h4>
+                <p class="fs-5 fw-bold">Har du inget konto?</p>
             </div>
             <div class="col-auto text-center">
                 <button (click)="openModal(template)" class="btn btn-secondary">Skapa konto</button>

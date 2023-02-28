@@ -13,7 +13,6 @@
 .top-bottom-big-padding {
     padding-top: 10vh;
     padding-bottom: 10vh;
-    text-align: center;
 }
 
 .gray {
@@ -39,17 +38,6 @@
     color: #2b6777;
 }
 
-.om-oss {
-    padding-top: 10vh;
-    padding-bottom: 5vh;
-}
-
 .icon {
     font-size: 5rem;
-}
-
-.icon-section {
-    margin-top: 1vh;
-    padding-top: 1vh;
-    padding-bottom: 5vh;
 }
