@@ -1,3 +1,9 @@
+@media screen and (max-width: 415px){
+    .logo{
+        max-height: 30px;
+    }
+}
+
 .router-outlet {
     min-height: 100vh;
 }
