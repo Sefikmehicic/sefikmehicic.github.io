@@ -7,11 +7,10 @@
             <p>Här kan du se hur mycker rot- och rutavdrag en person har använt.</p>
         </div>
     </div>
-    <div class="col-lg-6 offset-lg-3 form-group">
+    <div class="col-lg-4 offset-lg-4 col-8 offset-2 form-group">
         <div class="mb-3">
             <input type="number" [(ngModel)]="userInput" [disabled]="!result"
-                class="form-control form-control-lg text-center" id="floatingInput" placeholder="Personnummer"
-                maxlength="12">
+                class="form-control form-control-lg text-center fs-1" id="floatingInput" max="12" placeholder="Personnummer">
             <p class="text-danger text-center" [hidden]="blankInput">Fältet är tomt</p>
         </div>
     </div>

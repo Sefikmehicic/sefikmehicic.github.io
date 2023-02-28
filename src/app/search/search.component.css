@@ -1,10 +1,20 @@
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sthlm.jpg");
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sthlm.jpg"); */
+    background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(43,103,119,1) 96%);
     height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   color: white;
 }
+
+input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number'] {
+          -webkit-appearance: none;
+          margin: 0;
+        }
