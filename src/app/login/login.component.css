@@ -27,7 +27,7 @@
   .hr-lines:before{
     content:" ";
     height: 1px;
-    width: 200px;
+    width: 40%;
     background: #C8C9CA;
     display: block;
     position: absolute;
@@ -38,7 +38,7 @@
   .hr-lines:after{
     content:" ";
     height: 1px;
-    width: 200px;
+    width: 40%;
     background: #C8C9CA;
     display: inline-block;
     position: absolute;
