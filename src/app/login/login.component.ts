@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef  } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import * as $ from 'jquery'
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $('#navbar').hide();
+  }
+
+  ngOnDestroy(): void{
+    $('#navbar').show();
   }
 
 }

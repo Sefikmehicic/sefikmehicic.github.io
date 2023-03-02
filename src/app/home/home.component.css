@@ -11,8 +11,8 @@
 }
 
 .section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .gray {
@@ -42,12 +42,4 @@
 
 .icon-small{
     font-size: 2rem;
-}
-
-.circular--landscape { 
-    display: inline-block; position: relative; padding-right: 1vh; width: 400px; height: 400px; overflow: hidden; border-radius: 50%; 
-} 
-
-.circular--landscape img { 
-    width: auto; height: 100%; margin-left: -30%; 
 }
