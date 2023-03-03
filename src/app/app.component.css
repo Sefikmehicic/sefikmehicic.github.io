@@ -14,7 +14,14 @@ Grön: #3F613D */
 }
 
 .nav-link{
-    color: black!important;
+    font-weight: bold;
+    margin-right: 3vh;
+    color: #3F613D!important;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    text-decoration-color: #CAAE5A;
 }
 
 .navbar-brand {
