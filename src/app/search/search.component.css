@@ -1,15 +1,3 @@
-.hero {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/sthlm.jpg"); */
-    height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  color: white;
-}
-
 input[type='number']::-webkit-outer-spin-button,
         input[type='number']::-webkit-inner-spin-button,
         input[type='number'] {
@@ -17,7 +5,8 @@ input[type='number']::-webkit-outer-spin-button,
           margin: 0;
         }
 
-.result-section {
-  padding-top: 2vh;
-  padding-bottom: 10vh;
+.search-container{
+    min-height: 100vh;
+    padding: 2vh;
+    background-color: #FAF9F7;
 }

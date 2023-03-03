@@ -14,8 +14,22 @@ body{
     font-family: Montserrat;
 }
 
+.router-outlet {
+    min-height: 100vh;
+}
+
 .fs-big{
     font-size: calc(1.5rem + 2vw)!important;
+}
+
+.fs-6{
+    font-size: 1rem!important;
+}
+
+/* icon color */
+.icon-small{
+    color: #3F613D;
+    font-size: 2rem;
 }
 
 .text-danger{
@@ -37,6 +51,21 @@ body{
 .btn-primary:focus {
     background-color: #3F613D;
     border-color: #3F613D;
+}
+
+.btn-cta{
+    background-color: #CAAE5A;
+    border-color: #CAAE5A;
+}
+
+.btn-cta:hover{
+    background-color: #947f40;
+    border-color: #947f40;
+}
+
+.btn-cta{
+    background-color: #CAAE5A;
+    border-color: #CAAE5A;
 }
 
 
@@ -68,3 +97,10 @@ body{
 .form-control:disabled {
     opacity: 0.8;
 }
+
+.card{
+    border-radius: 2%;
+      border: 0;
+      box-shadow: 0px 0px 25px -12px black;
+      padding: 2vh;
+  }

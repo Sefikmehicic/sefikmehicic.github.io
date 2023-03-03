@@ -18,10 +18,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     $('#navbar').hide();
+    $('#footer').hide();
   }
 
   ngOnDestroy(): void{
     $('#navbar').show();
+    $('#footer').show();
   }
 
 }

@@ -7,10 +7,6 @@ Grön: #3F613D */
     }
 }
 
-.router-outlet {
-    min-height: 100vh;
-}
-
 .navbar {
     background-color: #ffffff;
     padding: 2vh;
@@ -28,6 +24,16 @@ Grön: #3F613D */
 .navbar-brand {
     text-decoration: none;
     color: inherit;
+}
+
+.btn-login{
+    border-color: #3F613D;
+    color: #3F613D;
+}
+
+.btn-login:hover{
+    background-color: #3F613D;
+    color: white;
 }
 
 .footer {

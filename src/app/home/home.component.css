@@ -29,17 +29,3 @@
 .card-body {
     border-radius: 25px !important;
 }
-
-/* icon color */
-.bi {
-    color: #3F613D;
-    font-size: 1.5rem;
-}
-
-.icon {
-    font-size: 5rem;
-}
-
-.icon-small{
-    font-size: 2rem;
-}

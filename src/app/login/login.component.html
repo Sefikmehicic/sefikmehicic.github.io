@@ -1,94 +1,95 @@
-<div class="login card">
-    <div class="col-auto text-center p-3">
-      <button class="btn btn-primary p-1" routerLink="/Search" id="bankid-button">
-        <img src="../../assets/images/BankID_logo_white.svg" />
+<div class="login-container d-flex align-items-center justify-content-center">
+  <div class="card">
+    <div class="">
+      <div class="col-auto text-center p-3">
+        <p class="fs-1">Logga in</p>
+        <button class="btn btn-primary p-1" routerLink="/Search" id="bankid-button">
+          <img src="../../assets/images/BankID_logo_white.svg" />
           Logga in med BankID
-            </button>
-    </div>
-  <div class="row text-center">
-    <p class="fs-5 hr-lines">eller</p>
-  </div>
-  <div class="col-lg-6 offset-lg-3">
-        <div class="">
-            <div class="col-lg-6 offset-lg-3 form-group">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">E-postadress</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Lösenord</label>
-                  </div>
-                  <div class="col-auto">
-                    <a href="#" class="link">Glömt lösenord?</a>
-                  </div>
-            </div>
-            <div class="col-auto text-center p-2">
-                <button class="btn btn-primary" routerLink="/Search">Logga in</button>
-            </div>
-            <hr class="col-lg-8 offset-lg-2 text-center"/>
-            <div class="col-lg-6 offset-lg-3 text-center">
-                <p class="fs-5 fw-bold">Har du inget konto?</p>
-            </div>
-            <div class="col-auto text-center">
-                <button (click)="openModal(template)" class="btn btn-secondary">Skapa konto</button>
-            </div>
+        </button>
+      </div>
+      <div class="row text-center">
+        <p class="fs-5 hr-lines">eller</p>
+      </div>
+      <div class="col-auto form-group">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">E-postadress</label>
         </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Lösenord</label>
+        </div>
+        <div class="col-auto">
+          <a href="#" class="link">Glömt lösenord?</a>
+        </div>
+      </div>
+      <div class="col-auto text-center p-2">
+        <button class="btn btn-primary" routerLink="/Search">Logga in</button>
+      </div>
+      <hr class="col-lg-8 offset-lg-2 text-center" />
+      <div class="col-lg-6 offset-lg-3 text-center">
+        <p class="fs-5 fw-bold">Har du inget konto?</p>
+      </div>
+      <div class="col-auto text-center">
+        <button (click)="openModal(template)" class="btn btn-secondary">Skapa konto</button>
+      </div>
     </div>
+  </div>
 </div>
 
 <ng-template #template>
-    <div class="modal-header">
-      <h4 class="modal-title pull-left display-6">Skapa konto</h4>
-      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
-      </button>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left display-6">Skapa konto</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput">
+      <label for="floatingInput">E-postadress</label>
     </div>
-    <div class="modal-body">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput2">
+      <label for="floatingInput">VAT-nummer</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput3">
+      <label for="floatingInput">Adress 1</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput4">
+      <label for="floatingInput">Adress 2</label>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput">
-            <label for="floatingInput">E-postadress</label>
+          <input type="email" class="form-control" id="floatingInput5">
+          <label for="floatingInput">Postnummer</label>
         </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput2">
-            <label for="floatingInput">VAT-nummer</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput3">
-            <label for="floatingInput">Adress 1</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput4">
-            <label for="floatingInput">Adress 2</label>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput5">
-                    <label for="floatingInput">Postnummer</label>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput6">
-                    <label for="floatingInput">Ort</label>
-                  </div>
-            </div>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingInput7">
-            <label for="floatingInput">Lösenord</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingInput8">
-            <label for="floatingInput">Bekräfta lösenord</label>
-          </div>
-          <hr/>
-          <div class="text-center mb-3">
-            <button class="btn btn-outline-primary" (click)="modalRef?.hide()" routerLink="/Search">Skapa</button>
-          </div>
-          <div class="text-center">
-            <p class="text-danger" (click)="modalRef?.hide()" href="#">Avbryt</p>
-          </div>
+          <input type="email" class="form-control" id="floatingInput6">
+          <label for="floatingInput">Ort</label>
+        </div>
+      </div>
     </div>
-  </ng-template>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput7">
+      <label for="floatingInput">Lösenord</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput8">
+      <label for="floatingInput">Bekräfta lösenord</label>
+    </div>
+    <hr />
+    <div class="text-center mb-3">
+      <button class="btn btn-outline-primary" (click)="modalRef?.hide()" routerLink="/Search">Skapa</button>
+    </div>
+    <div class="text-center">
+      <p class="text-danger" (click)="modalRef?.hide()" href="#">Avbryt</p>
+    </div>
+  </div>
+</ng-template>
