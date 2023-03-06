@@ -18,6 +18,11 @@ body{
     min-height: 100vh;
 }
 
+.section {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
 .fs-big{
     font-size: calc(1.5rem + 2vw)!important;
 }
