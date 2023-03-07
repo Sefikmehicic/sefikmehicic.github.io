@@ -14,6 +14,16 @@
       <li class="nav-item">
         <a class="nav-link fs-4" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/">Priser</a>
       </li>
+      <li id="ddlTools" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Verktyg
+        </a>
+        <ul class="dropdown-menu m-2">
+          <li><a class="dropdown-item fs-6" routerLink="/Search">Sök</a></li>
+          <li><a class="dropdown-item fs-6" routerLink="/Calculate">Räkna på arbete</a></li>
+          <li><a class="dropdown-item fs-6" routerLink="/Create-Case">Skapa ärende</a></li>
+        </ul>
+      </li>
     </ul>
     <form class="form-inline col-auto d-flex justify-content-end">
       <button id="btnLogin" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="btn btn-outline-primary btn-login" routerLink="/Login">Logga in</button>

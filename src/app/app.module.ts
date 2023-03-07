@@ -10,6 +10,8 @@ import { SearchComponent } from './search/search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { CreateCaseComponent } from './create-case/create-case.component';
+import { CalculateComponent } from './calculate/calculate.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AboutComponent } from './about/about.component';
     SearchComponent,
     SearchHistoryComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    CreateCaseComponent,
+    CalculateComponent
   ],
   imports: [
     BrowserModule,

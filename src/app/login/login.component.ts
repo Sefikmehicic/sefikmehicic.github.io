@@ -25,5 +25,4 @@ export class LoginComponent implements OnInit {
     $('#navbar').show();
     $('#footer').show();
   }
-
 }

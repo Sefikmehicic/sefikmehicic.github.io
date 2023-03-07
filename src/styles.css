@@ -8,6 +8,10 @@ Grön: #3F613D */
     --green-color: #3F613D;
 }
 
+.router-outlet {
+    min-height: 90vh;
+}
+
 body{
     position: relative;
     min-height: 100vh;
