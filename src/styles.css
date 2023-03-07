@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap-icons/font/bootstrap-icons';
-
 /* Gul: #CAAE5A
 Grön: #3F613D */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --green-color: #3F613D;
+}
 
 body{
     position: relative;
@@ -35,9 +37,17 @@ body{
     text-decoration: underline;
 }
 
+.btn{
+    border-radius: 0;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
 .btn-primary {
-    background-color: #3F613D;
-    border-color: #3F613D;
+    background-color: var(--green-color);
+    border-color: var(--green-color);
 }
 
 .btn-primary:hover {
@@ -46,8 +56,8 @@ body{
 }
 
 .btn-primary:focus {
-    background-color: #3F613D;
-    border-color: #3F613D;
+    background-color: var(--green-color);
+    border-color: var(--green-color);
 }
 
 .btn-cta{
@@ -63,18 +73,6 @@ body{
 .btn-cta{
     background-color: #CAAE5A;
     border-color: #CAAE5A;
-}
-
-.link{
-    color: #52ab98;
-}
-
-.link:hover {
-    color: #418979;
-}
-
-.link:focus {
-    color: #52ab98;
 }
 
 
