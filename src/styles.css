@@ -13,10 +13,6 @@ body{
     color: #1e2127;
     font-family: Montserrat;
 }
-/* 
-.router-outlet {
-    min-height: 100vh;
-} */
 
 .section {
     padding-top: 5vh;
