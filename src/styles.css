@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap-icons/font/bootstrap-icons';
-/* Gul: #CAAE5A
-Grön: #3F613D */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+/* Variables */
 :root {
-    --green-color: #3F613D;
+    --primary-color: #1840E3;
+    --primary-color-hover: #1537be;
 }
 
 .router-outlet {
@@ -15,14 +15,15 @@ Grön: #3F613D */
 body{
     position: relative;
     min-height: 100vh;
-    background-color: white;
+    /* background-color: #F7F6F7; */
+    background-color: #FDFDFD;
     color: #1e2127;
     font-family: Montserrat;
 }
 
 .section {
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
 }
 
 .fs-big{
@@ -31,7 +32,7 @@ body{
 
 /* icon color */
 .icon-small{
-    color: #3F613D;
+    color: black;
     font-size: 2rem;
 }
 
@@ -50,18 +51,18 @@ body{
 }
 
 .btn-primary {
-    background-color: var(--green-color);
-    border-color: var(--green-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background-color: #2f492e;
-    border-color: #2f492e;
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
 }
 
 .btn-primary:focus {
-    background-color: var(--green-color);
-    border-color: var(--green-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-cta{
@@ -100,4 +101,17 @@ body{
       border: 0;
       border-radius: 0;
       padding: 2vh;
+      box-shadow: 0 1px 11px 0 rgba(0, 0, 0, .08);
   }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: #545454;
+    color: white;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
