@@ -4,9 +4,9 @@
 
 /* Variables */
 :root {
-    /* --primary-color: #1840E3; */
-    --primary-color: #047AEE;
-    --primary-color-hover: #0257ac;
+    /* --primary-color: #047AEE; */
+    --primary-color: #24595A;
+    --primary-color-hover: #193d3d;
 }
 
 .router-outlet {
@@ -16,7 +16,6 @@
 body{
     position: relative;
     min-height: 100vh;
-    /* background-color: #F7F6F7; */
     background-color: #FDFDFD;
     color: #1e2127;
     font-family: Montserrat;
