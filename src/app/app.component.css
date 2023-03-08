@@ -17,8 +17,12 @@ Grön: #3F613D */
     color: black;
 }
 
+.nav-link:hover{
+    color: var(--primary-color);
+}
+
 .bi-list{
-    color: #1840E3;
+    color: var(--primary-color);
     font-size: 2rem;
 }
 
@@ -28,10 +32,6 @@ Grön: #3F613D */
 
 .navbar-toggler:focus{
     border: none;
-}
-
-.nav-link:hover{
-    color: #1840E3;
 }
 
 .navbar-brand {
@@ -44,11 +44,11 @@ Grön: #3F613D */
 }
 
 .btn-login{
-    border-color: #1840E3;
-    color: #1840E3;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-login:hover{
-    background-color: #1840E3;
+    background-color: var(--primary-color-hover);
     color: white;
 }
