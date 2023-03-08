@@ -3,7 +3,7 @@ Grön: #3F613D */
 
 @media screen and (max-width: 415px){
     .logo{
-        max-height: 30px;
+        max-height: 40px;
     }
 }
 
@@ -14,7 +14,7 @@ Grön: #3F613D */
 .nav-link{
     font-weight: bold;
     margin-right: 3vh;
-    color: black;
+    color: var(--second-color);
 }
 
 .nav-link:hover{

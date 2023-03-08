@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap-icons/font/bootstrap-icons';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&family=Fredoka+One&family=Lexend:wght@400;600&family=Montserrat:wght@400;600&family=STIX+Two+Text:wght@700&display=swap');
 /* Variables */
 :root {
     /* --primary-color: #047AEE; */
     --primary-color: #24595A;
     --primary-color-hover: #193d3d;
+    --second-color: #2c8789;
 }
 
 .router-outlet {
@@ -17,8 +17,20 @@ body{
     position: relative;
     min-height: 100vh;
     background-color: #FDFDFD;
-    color: #1e2127;
-    font-family: Montserrat;
+    color: black;
+    font-family: 'Lexend', sans-serif;
+}
+
+.test {
+    font-size: calc(3.5rem + 2vw)!important;
+    color: var(--primary-color);
+}
+
+.header-text {
+    font-family: 'Lexend', sans-serif;
+    line-height: 5rem;
+    letter-spacing: -0.5rem;
+    color: black;
 }
 
 .section {
@@ -28,6 +40,10 @@ body{
 
 .fs-big{
     font-size: calc(1.5rem + 2vw)!important;
+}
+
+.fs-bigger{
+    font-size: calc(5rem + 2vw)!important;
 }
 
 /* icon color */
