@@ -41,11 +41,11 @@
 }
 
 .btn-login{
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .btn-login:hover{
-    background-color: var(--primary-color-hover);
+    background-color: var(--secondary-color);
     color: white;
 }
