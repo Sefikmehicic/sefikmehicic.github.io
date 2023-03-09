@@ -8,7 +8,7 @@
 
     /* COLORS */
     --primary-color: #24595A;
-    --primary-color-hover: #216768;
+    --primary-color-hover: #1e4a4b;
     --secondary-color: #2c8789;
 }
 
@@ -65,8 +65,8 @@ body{
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
@@ -75,8 +75,8 @@ body{
 }
 
 .btn-primary:focus {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .form-control:disabled {
