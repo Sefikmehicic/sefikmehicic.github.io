@@ -3,10 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&family=Fredoka+One&family=Lexend:wght@400;600&family=Montserrat:wght@400;600&family=STIX+Two+Text:wght@700&display=swap');
 /* Variables */
 :root {
-    /* --primary-color: #047AEE; */
     --primary-color: #24595A;
     --primary-color-hover: #193d3d;
-    --second-color: #2c8789;
+    --secondary-color: #2c8789;
 }
 
 .router-outlet {
@@ -21,16 +20,9 @@ body{
     font-family: 'Lexend', sans-serif;
 }
 
-.test {
-    font-size: calc(3.5rem + 2vw)!important;
-    color: var(--primary-color);
-}
-
 .header-text {
-    font-family: 'Lexend', sans-serif;
-    line-height: 5rem;
+    line-height: 6rem;
     letter-spacing: -0.5rem;
-    color: black;
 }
 
 .section {
@@ -38,12 +30,13 @@ body{
     padding-bottom: 10vh;
 }
 
+/* FONT SIZES AND COLOR */
 .fs-big{
-    font-size: calc(1.5rem + 2vw)!important;
+    font-size: 6rem!important;
 }
 
-.fs-bigger{
-    font-size: calc(5rem + 2vw)!important;
+.fc-primary{
+    color: var(--primary-color);
 }
 
 /* icon color */
@@ -80,34 +73,6 @@ body{
 .btn-primary:focus {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-}
-
-.btn-cta{
-    background-color: #CAAE5A;
-    border-color: #CAAE5A;
-}
-
-.btn-cta:hover{
-    background-color: #947f40;
-    border-color: #947f40;
-}
-
-.btn-cta{
-    background-color: #CAAE5A;
-    border-color: #CAAE5A;
-}
-
-
-.btn-outline-success {
-    border-color: #52ab98;
-}
-
-.btn-outline-success:hover {
-    background-color: #418979;
-}
-
-.point-text {
-    color: #3F613D;
 }
 
 .form-control:disabled {

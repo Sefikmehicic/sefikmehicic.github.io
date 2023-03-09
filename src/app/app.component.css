@@ -14,7 +14,7 @@ Grön: #3F613D */
 .nav-link{
     font-weight: bold;
     margin-right: 3vh;
-    color: var(--second-color);
+    color: var(--secondary-color);
 }
 
 .nav-link:hover{
