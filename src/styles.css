@@ -46,7 +46,7 @@ body{
 /* icon color */
 .icon-small{
     background-color: #FDFDFD;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 2rem;
 }
 
