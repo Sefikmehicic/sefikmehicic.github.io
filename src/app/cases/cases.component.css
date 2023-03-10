@@ -1,3 +1,7 @@
+.tr{
+    white-space: nowrap!important;
+}
+
 .tr:hover{
     background-color: var(--secondary-color);
     color: white;
