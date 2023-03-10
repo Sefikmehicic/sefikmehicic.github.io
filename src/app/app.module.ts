@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CreateCaseComponent } from './create-case/create-case.component';
 import { CalculateComponent } from './calculate/calculate.component';
+import { CasesComponent } from './cases/cases.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CalculateComponent } from './calculate/calculate.component';
     HomeComponent,
     AboutComponent,
     CreateCaseComponent,
-    CalculateComponent
+    CalculateComponent,
+    CasesComponent
   ],
   imports: [
     BrowserModule,

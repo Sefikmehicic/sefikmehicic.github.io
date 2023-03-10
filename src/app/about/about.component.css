@@ -2,3 +2,8 @@
     min-height: 100vh;
     padding: 2vh;
 }
+
+.card{
+    background-color: var(--secondary-color);
+    color: white;
+  }

@@ -1,0 +1,9 @@
+.tr:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.tr:hover a{
+    color: white;
+}

@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CreateCaseComponent } from './create-case/create-case.component';
 import { CalculateComponent } from './calculate/calculate.component';
+import { CasesComponent } from './cases/cases.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'Search/History', component: SearchHistoryComponent},
   { path: 'About', component: AboutComponent},
   { path: 'Create-Case', component: CreateCaseComponent},
-  { path: 'Calculate', component: CalculateComponent}
+  { path: 'Calculate', component: CalculateComponent},
+  { path: 'Cases', component: CasesComponent}
 ];
 
 @NgModule({
