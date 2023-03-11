@@ -60,6 +60,10 @@ body{
     text-decoration-color: red;
 }
 
+.border-secondary{
+    border-color: var(--secondary-color)!important;
+}
+
 .btn{
     border-radius: 0;
 }
