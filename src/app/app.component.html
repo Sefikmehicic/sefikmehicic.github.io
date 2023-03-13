@@ -3,7 +3,7 @@
       <img class="logo" src="../../assets/images/R2.png" height="60px" alt="">
       <!-- <span class="fs-3 m-0 p-0 align-bottom">Rotur</span> -->
   </a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button id="btnToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <!-- <span class="navbar-toggler-icon"></span> -->
     <span class="bi bi-list"></span>
   </button>
@@ -12,12 +12,12 @@
     <hr>
     <ul class="navbar-nav col d-flex justify-content-center">
       <li class="nav-item">
-        <a class="nav-link fs-5" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/About">Om oss</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link fs-5" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/">Priser</a>
       </li>
-      <li id="ddlTools" class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link fs-5" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/About">Om oss</a>
+      </li>
+      <!-- <li id="ddlTools" class="nav-item dropdown">
         <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Verktyg
         </a>
@@ -25,10 +25,16 @@
           <li><a class="dropdown-item fs-6" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Search">Sök</a></li>
           <li><a class="dropdown-item fs-6" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Calculate">Räkna på arbete</a></li>
         </ul>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link fs-5" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Cases">Mina ärenden</a>
-      </li>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link fs-5 position-relative" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Dashboard">Dashboard<span class="beta position-absolute top-0 start-100 translate-middle badge pill bg-danger">
+          [BETA]
+          <span class="visually-hidden"></span>
+        </span></a>
+      </li> -->
     </ul>
     <form class="form-inline col-auto d-flex justify-content-end">
       <button id="btnLogin" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="btn btn-outline-primary btn-login" routerLink="/Login">Logga in</button>

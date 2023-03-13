@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { CreateCaseComponent } from './create-case/create-case.component';
 import { CalculateComponent } from './calculate/calculate.component';
 import { CasesComponent } from './cases/cases.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CasesComponent } from './cases/cases.component';
     AboutComponent,
     CreateCaseComponent,
     CalculateComponent,
-    CasesComponent
+    CasesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

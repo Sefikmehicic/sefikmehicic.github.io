@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .sidebar {
+        width: 14rem !important;
+    }
+}
+
+.sidebar {
+    background-color: var(--secondary-color);
+    /* width: 6.5rem; */
+    min-height: 100vh;
+}
+
+/* .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+} */
