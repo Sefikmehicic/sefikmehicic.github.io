@@ -4,17 +4,18 @@
             <div class="d-flex justify-content-end">
                 <button type="button" class="btn-close navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="d-flex justify-content-center">
-                <a class="navbar-brand mb-0 pb-0" routerLink="/">
-                    <img class="logo" src="../../assets/images/R2.png" height="60px" alt="">
-                </a>
-            </div>
             <hr class="border border-secondary border-2 opacity-75">
             <li class="nav-item">
-                <a class="nav-link fs-4" href="/Search">
+                <a class="nav-link fs-4" routerLink="search" data-bs-dismiss="offcanvas" aria-label="Close">
                     Sök
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link fs-4" routerLink="cases" data-bs-dismiss="offcanvas" aria-label="Close">
+                    Ärenden
+                </a>
+            </li>
+            
         </div>
     </ul>
     <div class="container-fluid">
@@ -22,8 +23,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="bi bi-list"></span>
               </button>
-            <app-search *ngif="page as 'search'"></app-search>
-            <app-about *ngif="page as 'about'"></app-about>
+              <p class="fs-2 text-danger">Om du ser det här... det kommer bli snyggare!</p>
+              <router-outlet></router-outlet>
           </div>
     </div>
 </div>

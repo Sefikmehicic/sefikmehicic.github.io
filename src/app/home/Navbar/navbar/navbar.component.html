@@ -1,0 +1,41 @@
+<nav id="navbar" class="navbar navbar-expand-lg container-fluid shadow-sm">
+    <a class="navbar-brand mb-0 pb-0" routerLink="/">
+        <img class="logo" src="../../assets/images/R2.png" height="60px" alt="">
+    </a>
+    <button id="btnToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bi bi-list"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <hr>
+      <ul class="navbar-nav col d-flex justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="">Priser</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="About">Om oss</a>
+        </li>
+        <!-- <li id="ddlTools" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Verktyg
+          </a>
+          <ul class="dropdown-menu m-2">
+            <li><a class="dropdown-item fs-6" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Search">Sök</a></li>
+            <li><a class="dropdown-item fs-6" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Calculate">Räkna på arbete</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link fs-5" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Cases">Mina ärenden</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link fs-5 position-relative" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="/Dashboard">Dashboard<span class="beta position-absolute top-0 start-100 translate-middle badge pill bg-danger">
+            [BETA]
+            <span class="visually-hidden"></span>
+          </span></a>
+        </li> -->
+      </ul>
+      <form class="form-inline col-auto d-flex justify-content-end">
+        <button id="btnLogin" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="btn btn-outline-primary btn-login" routerLink="/Login">Logga in</button>
+      </form>
+    </div>
+  </nav>

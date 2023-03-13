@@ -14,6 +14,7 @@ import { CreateCaseComponent } from './create-case/create-case.component';
 import { CalculateComponent } from './calculate/calculate.component';
 import { CasesComponent } from './cases/cases.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './home/Navbar/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CreateCaseComponent,
     CalculateComponent,
     CasesComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

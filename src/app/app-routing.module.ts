@@ -11,16 +11,33 @@ import { CasesComponent } from './cases/cases.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Home', pathMatch: 'full'},
-  { path: 'Home', component: HomeComponent},
+  // { path: '', redirectTo: '/Home', pathMatch: 'full'},
+  { 
+    path: '', component: HomeComponent,
+    children: [
+      {
+        path: 'about', component: AboutComponent
+      }
+    ]
+  },
+  // { path: 'Home', component: HomeComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Search', component: SearchComponent},
   { path: 'Search/History', component: SearchHistoryComponent},
   { path: 'About', component: AboutComponent},
   { path: 'Create-Case', component: CreateCaseComponent},
   { path: 'Calculate', component: CalculateComponent},
   { path: 'Cases', component: CasesComponent},
-  { path: 'Dashboard', component: DashboardComponent}
+  {
+    path: 'Dashboard', component: DashboardComponent,
+    children: [
+      {
+        path: 'search', component: SearchComponent
+      },
+      {
+        path: 'cases', component: CasesComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

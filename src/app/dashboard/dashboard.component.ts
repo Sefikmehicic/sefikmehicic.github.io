@@ -7,15 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  page: string = 'search';
-
   constructor() { }
 
   ngOnInit(): void {
-    $('#navbar').hide();
   }
 
   ngOnDestroy(): void {
-    $('#navbar').show();
   }
 }
