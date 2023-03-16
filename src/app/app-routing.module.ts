@@ -36,7 +36,10 @@ const routes: Routes = [
         path: 'cases', component: CasesComponent
       },
       {
-        path: 'about', component: AboutComponent
+        path: 'create-case', component: CreateCaseComponent
+      },
+      {
+        path: 'calculate', component: CalculateComponent
       }
     ]
   }

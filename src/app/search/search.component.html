@@ -1,11 +1,24 @@
-<div class="container-fluid section text-center pb-0">
-    <div class="">
+<div class="container-fluid pb-0">
+    <div class="row">
         <p class="fs-4">Sök på personnummer</p>
-        <p class="fs-5">Se kundens personuppgifter samt preliminära rot- & rut kvarvarande belopp för i år.</p>
+        <!-- <p class="fs-5">Se kundens personuppgifter samt preliminära rot- & rut kvarvarande belopp för i år.</p> -->
+        <div class="col-auto">
+            <input type="number" [(ngModel)]="userInput" [disabled]="!result"
+                class="form-control form-control-lg text-center fs-5" id="floatingInput" max="12"
+                placeholder="Personnummer">
+            <p class="text-danger text-center" [hidden]="blankInput">Fältet är tomt</p>
+        </div>
+        <div class="col-auto d-flex align-items-end">
+            <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
+            <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <hr class="border border-secondary border-2 opacity-75 m-2">
     </div>
-    <div class="d-flex align-items-center justify-content-center">
+    <!-- <div class="d-flex align-items-center justify-content-center">
         <div class="">
-            <div class="col-lg-10 offset-lg-1 col-8 offset-2">
+            <div class="col-auto">
                 <div class="mb-3">
                     <input type="number" [(ngModel)]="userInput" [disabled]="!result"
                         class="form-control form-control-lg text-center fs-4" id="floatingInput" max="12"
@@ -14,22 +27,20 @@
                 </div>
             </div>
             <div class="col-auto text-center">
-                <!-- <a class="link m-3" routerLink="/Search/History">&#x21ba;{{historyBtnText}}</a> -->
                 <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
                 <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
-<div id="searchContainer" class="search-container">
-    <div class="container swing-in-top-fwd" [hidden]="result">
-        <hr class="border border-secondary border-2 opacity-75">
-        <div class="row mt-5">
+<div id="searchContainer" class="search-container" [hidden]="result">
+    <div class="container card swing-in-top-fwd">
+        <div class="row">
             <div class="col-lg-6 col mb-5 mobile">
                 <p class="fs-4"><span class="bi bi-person-fill icon-small"></span> Personuppgifter</p>
-                <div class="card">
+                <div class="card result">
                     <table class="table">
                         <tbody>
                             <tr>
@@ -58,7 +69,7 @@
             </div>
             <div class="col-lg-6 mb-5 col mobile">
                 <p class="fs-4"><span class="bi bi-wallet-fill icon-small"></span> Rot- & rutbelopp</p>
-                <div class="card">
+                <div class="card result">
                     <table class="table">
                         <thead>
                             <tr>
@@ -83,7 +94,7 @@
         <div class="row mb-5">
             <div class="col mobile">
                 <p class="fs-4"><span class="bi bi-clock-history icon-small"></span> Historik</p>
-                <div class="card">
+                <div class="card result">
                     <table class="table table-sm">
                         <thead>
                             <tr>
@@ -116,8 +127,10 @@
         <div class="row">
             <hr class="border border-secondary border-2 opacity-75">
             <div class="col text-end mobile">
-                <button class="btn btn-primary" routerLink="/Calculate" [queryParams]="{id: userInput}">Räkna på arbete</button>
-                <button class="btn btn-primary ms-2" routerLink="/Cases" [queryParams]="{id: userInput}">Skapa ärende</button>
+                <button class="btn btn-primary" routerLink="Dashboard/calculate" [queryParams]="{id: userInput}">Räkna på
+                    arbete</button>
+                <button class="btn btn-primary ms-2" routerLink="create-case" [queryParams]="{id: userInput}">Skapa
+                    ärende</button>
             </div>
         </div>
     </div>

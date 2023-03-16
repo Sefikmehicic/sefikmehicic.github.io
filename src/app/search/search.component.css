@@ -10,7 +10,7 @@ input[type='number']::-webkit-outer-spin-button,
     padding: 2vh;
 }
 
-.card{
+.result{
   background-color: var(--secondary-color);
 }
 

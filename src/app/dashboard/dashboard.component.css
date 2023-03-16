@@ -2,6 +2,7 @@
     .offcanvas{
         width: 20rem;
         min-height: 100vh;
+        height: 100%;
         position: relative;
     }
 
@@ -25,11 +26,3 @@
 .offcanvas-body{
     background-color: var(--secondary-color);
 }
-
-/* .navbar-nav{
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-} */
