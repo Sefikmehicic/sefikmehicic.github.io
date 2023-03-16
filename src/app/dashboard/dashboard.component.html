@@ -1,4 +1,4 @@
-<div class="row ">
+<div class="row">
   <div class="col-auto">
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
       id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -11,21 +11,20 @@
       </div>
       <div class="offcanvas-body">
         <div class="list-group">
-          <a class="nav-link" routerLink="search">Sök</a>
-          <a class="nav-link" routerLink="cases">Mina ärenden</a>
-          <a class="nav-link" routerLink="create-case">Skapa ärende</a>
-          <a class="nav-link" routerLink="calculate">Räkna på arbete</a>
+          <a class="nav-link fs-4" routerLink="search"><i class="bi bi-search nav-icon"></i>Sök</a>
+          <hr class="mb-4">
+          <a class="nav-link fs-4" routerLink="cases"><i class="bi bi-card-text nav-icon"></i>Mina ärenden</a>
+          <a class="nav-link fs-4" routerLink="create-case"><i class="bi bi-plus-square nav-icon"></i>Skapa ärende</a>
+          <a class="nav-link fs-4" routerLink="calculate"><i class="bi bi-calculator nav-icon"></i>Räkna på arbete</a>
         </div>
-
       </div>
     </div>
   </div>
   <div class="col">
+    <button class="btn btn-primary btn-collapse" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling"><span class="bi bi-list"></span></button>
     <div class="row">
-      <div class="col-auto">
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling"><span class="bi bi-list"></span></button>
-      </div>
+        
     </div>
       <router-outlet></router-outlet>
   </div>

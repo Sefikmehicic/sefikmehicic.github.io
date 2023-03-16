@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'Calculate', component: CalculateComponent},
   { path: 'Cases', component: CasesComponent},
   {
-    path: 'Dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent,
     children: [
       {
         path: 'search', component: SearchComponent

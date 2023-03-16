@@ -26,3 +26,16 @@
 .offcanvas-body{
     background-color: var(--secondary-color);
 }
+
+.nav-link{
+    margin-bottom: 1rem;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.nav-icon{
+    margin-right: 2rem;
+}
