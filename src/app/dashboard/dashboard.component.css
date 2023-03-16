@@ -1,13 +1,29 @@
-@media (min-width: 768px) {
-    .sidebar {
-        width: 14rem !important;
+@media (min-width: 915px) {
+    .offcanvas{
+        width: 20rem;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .offcanvas:not(.show){
+        width: 0px;
+        transition: width 0.2s;
+        transition-timing-function: linear;
+    }
+
+    .offcanvas.show:not(.hiding), .offcanvas.showing {
+        transform: none;
+        transition: width 0.2s;
+        transition-timing-function: linear;
     }
 }
 
-.sidebar {
+.offcanvas{
+    color: white;
+}
+
+.offcanvas-body{
     background-color: var(--secondary-color);
-    /* width: 6.5rem; */
-    min-height: 100vh;
 }
 
 /* .navbar-nav{

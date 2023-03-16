@@ -10,8 +10,10 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#navbar').hide();
   }
 
   ngOnDestroy(): void {
+    $('#navbar').show();
   }
 }

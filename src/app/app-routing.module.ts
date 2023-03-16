@@ -22,7 +22,6 @@ const routes: Routes = [
   },
   // { path: 'Home', component: HomeComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Search/History', component: SearchHistoryComponent},
   { path: 'About', component: AboutComponent},
   { path: 'Create-Case', component: CreateCaseComponent},
   { path: 'Calculate', component: CalculateComponent},
@@ -35,6 +34,9 @@ const routes: Routes = [
       },
       {
         path: 'cases', component: CasesComponent
+      },
+      {
+        path: 'about', component: AboutComponent
       }
     ]
   }
