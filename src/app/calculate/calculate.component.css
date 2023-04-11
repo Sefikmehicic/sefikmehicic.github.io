@@ -1,0 +1,23 @@
+.calculate-container{
+    min-height: 70vh;
+    padding: 2vh;
+}
+
+.hour-cell{
+    max-width: 80px;
+}
+
+/* .material-cost-cell{
+    display: flex!important;
+    justify-content: flex-end!important;
+} */
+
+.material-cost-cell-size {
+    max-width: 160px;
+}
+
+.table-sum{
+    --bs-table-bg: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}

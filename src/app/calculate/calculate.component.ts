@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-calculate',
@@ -7,12 +7,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./calculate.component.css']
 })
 export class CalculateComponent implements OnInit {
+  type: string = "none";
+  customerId: string = "";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
+  onChange(value: any) {
+    this.type = value.target.value;
+}
 
   ngOnInit(): void {
     if(this.router.url.includes('id')){
-      
+      this.route.queryParams
+      .subscribe(params => {
+        this.customerId = params["id"];
+      }
+    );
     }
   }
 
