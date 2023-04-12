@@ -6,21 +6,33 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './calculate.component.html',
   styleUrls: ['./calculate.component.css']
 })
+
 export class CalculateComponent implements OnInit {
   type: string = "none";
   customerId: string = "";
+  showInfo: boolean = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   onChange(value: any) {
     this.type = value.target.value;
 }
+
+  search(): void {
+    if(this.customerId){
+      this.showInfo = true;
+    }
+    else{
+      this.showInfo = false;
+    }
+  }
 
   ngOnInit(): void {
     if(this.router.url.includes('id')){
       this.route.queryParams
       .subscribe(params => {
         this.customerId = params["id"];
+        this.showInfo = true;
       }
     );
     }

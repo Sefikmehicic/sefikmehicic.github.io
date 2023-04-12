@@ -51,10 +51,8 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // $('#btnLogin').hide();
   }
 
   ngOnDestroy(): void{
-    // $('#btnLogin').show();
   }
 }

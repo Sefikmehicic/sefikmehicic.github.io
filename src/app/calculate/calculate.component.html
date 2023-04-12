@@ -17,7 +17,7 @@
         </div>
         <div class="row col-lg-6 offset-lg-3">
             <p class="fs-5 fw-bold">Upgifter om köparen</p>
-            <div class="col-6">
+            <!-- <div class="col-6">
                 <p class="fs-6">Köparens personnummer</p>
             </div>
             <div class="col-auto text-start d-flex align-items-start">
@@ -33,6 +33,43 @@
                 <p class="fs-6">Postnummer & ort</p>
                 <p class="fs-6">Ärendenummer</p>
             </div>
+            <div class="col-6">
+                <p class="fs-6">Omar Jama</p>
+                <p class="fs-6">Hammarögatan 14<br>123 40 FARSTA</p>
+                <p class="fs-6">Postnummer & ort</p>
+                <p class="fs-6">Ärendenummer</p>
+            </div> -->
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td>Köparens personnummer</td>
+                        <td class="d-flex"><input type="number" class="form-control text-center" id="customerId" max="12" [(ngModel)]="customerId">
+                            <button class="btn btn-primary" (click)="search()">Sök</button></td>
+                    </tr>
+                </tbody>
+                <tbody *ngIf="showInfo">
+                    <tr>
+                        <td>Köparens namn</td>
+                        <td class="text-end">Omar Jama</td>
+                    </tr>
+                    <tr>
+                        <td>Köparens Adress</td>
+                        <td class="text-end">Hammarögatan 14</td>
+                    </tr>
+                    <tr>
+                        <td>Postnummer & Ort</td>
+                        <td class="text-end">123 40 Farsta</td>
+                    </tr>
+                    <tr>
+                        <td>Ärendenummer</td>
+                        <td class="text-end">1001</td>
+                    </tr>
+                    <tr class="fw-bold">
+                        <td class="pt-5">Preliminär Rot</td>
+                        <td class="pt-5 text-end">3 000:-</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="row pt-5 table-responsive-sm col-lg-6 offset-lg-3 mobile" *ngIf="type == 'RUT'">
             <table class="table">
