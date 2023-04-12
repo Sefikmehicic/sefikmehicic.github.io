@@ -4,217 +4,100 @@
         <hr class="border border-secondary border-2 opacity-75 m-2">
     </div>
 </div>
-<div class="calculate-container">
+<div class="calculate-container pt-3">
     <div class="container">
-        <div class="row pb-5 col-lg-6 offset-lg-3">
-            <div class="col-auto">
-                <select class="form-select" id="ddlType" aria-label="Typ av arbete" (change)="onChange($event)">
-                    <option value="None" selected>Typ av arbete</option>
-                    <option value="ROT">ROT</option>
-                    <option value="RUT">RUT</option>
-                </select>
-            </div>
-        </div>
-        <div class="row col-lg-6 offset-lg-3">
+        <div class="row col-lg-6 offset-lg-3 col">
             <p class="fs-5 fw-bold">Upgifter om köparen</p>
-            <!-- <div class="col-6">
-                <p class="fs-6">Köparens personnummer</p>
-            </div>
-            <div class="col-auto text-start d-flex align-items-start">
-                <input type="number" class="form-control text-center" id="customerId" max="12"
-                    placeholder="Personnummer" [(ngModel)]="customerId">
-                <button class="btn btn-primary">Sök</button>
+            <div class="card">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td>Köparens personnummer</td>
+                            <td class="d-flex"><input type="number" class="form-control text-center" id="customerId" max="12" [(ngModel)]="customerId">
+                                <button class="btn btn-primary" (click)="search()">Sök</button></td>
+                        </tr>
+                    </tbody>
+                    <tbody *ngIf="showInfo">
+                        <tr>
+                            <td>Köparens namn</td>
+                            <td class="text-end">Omar Jama</td>
+                        </tr>
+                        <tr>
+                            <td>Köparens Adress</td>
+                            <td class="text-end">Hammarögatan 14</td>
+                        </tr>
+                        <tr>
+                            <td>Postnummer & Ort</td>
+                            <td class="text-end">123 40 Farsta</td>
+                        </tr>
+                        <tr>
+                            <td>Ärendenummer</td>
+                            <td class="text-end">1001</td>
+                        </tr>
+                        <tr class="fw-bold">
+                            <td class="pt-5">Preliminär Rot</td>
+                            <td class="pt-5 text-end">3 000:-</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="row col-lg-6 offset-lg-3">
-            <div class="col-6">
-                <p class="fs-6">Köparens namn</p>
-                <p class="fs-6">Köparens adress</p>
-                <p class="fs-6">Postnummer & ort</p>
-                <p class="fs-6">Ärendenummer</p>
+        <div class="row table-responsive-sm col-lg-6 offset-lg-3 mobile">
+            <div class="row pt-5 pb-3" *ngIf="showInfo">
+                <div class="col-auto">
+                    <select class="form-select" id="ddlType" aria-label="Typ av arbete" (change)="typeOfWork($event)">
+                        <option value="None" selected>Typ av arbete</option>
+                        <option value="ROT">ROT</option>
+                        <option value="RUT">RUT</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-6">
-                <p class="fs-6">Omar Jama</p>
-                <p class="fs-6">Hammarögatan 14<br>123 40 FARSTA</p>
-                <p class="fs-6">Postnummer & ort</p>
-                <p class="fs-6">Ärendenummer</p>
-            </div> -->
-            <table class="table table-borderless">
-                <tbody>
-                    <tr>
-                        <td>Köparens personnummer</td>
-                        <td class="d-flex"><input type="number" class="form-control text-center" id="customerId" max="12" [(ngModel)]="customerId">
-                            <button class="btn btn-primary" (click)="search()">Sök</button></td>
-                    </tr>
-                </tbody>
-                <tbody *ngIf="showInfo">
-                    <tr>
-                        <td>Köparens namn</td>
-                        <td class="text-end">Omar Jama</td>
-                    </tr>
-                    <tr>
-                        <td>Köparens Adress</td>
-                        <td class="text-end">Hammarögatan 14</td>
-                    </tr>
-                    <tr>
-                        <td>Postnummer & Ort</td>
-                        <td class="text-end">123 40 Farsta</td>
-                    </tr>
-                    <tr>
-                        <td>Ärendenummer</td>
-                        <td class="text-end">1001</td>
-                    </tr>
-                    <tr class="fw-bold">
-                        <td class="pt-5">Preliminär Rot</td>
-                        <td class="pt-5 text-end">3 000:-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="row pt-5 table-responsive-sm col-lg-6 offset-lg-3 mobile" *ngIf="type == 'RUT'">
-            <table class="table">
-                <thead>
-                    <tr class="text-nowrap">
-                        <th scope="col">Arbete</th>
-                        <th scope="col">Timmar</th>
-                        <th scope="col">Materialkostnad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Barnpassning</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Flyttjänster</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>IT-tjänster</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Kläd- och textilvård</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Möblering</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Personlig omsorg</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Reparation av vitvaror</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Snöskottning</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Städning</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Tillsyn av bostad</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Trädgårdsarbete</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr class="table-sum">
-                        <td>Summa</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">7 000:-</td>
-                    </tr>
-                </tbody>
-                
-            </table>
-        </div>
-        <div class="row pt-5 table-responsive-sm col-lg-6 offset-lg-3 mobile" *ngIf="type == 'ROT'">
-            <table class="table">
-                <thead>
-                    <tr class="text-nowrap">
-                        <th scope="col">Arbete</th>
-                        <th scope="col">Timmar</th>
-                        <th scope="col">Materialkostnad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bygg</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>El</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Glas/Plåt</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Mark/Dränering</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Murning</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>Målning/Tapetsering</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr>
-                        <td>VVS</td>
-                        <td><input type="number" class="form-control form-control-sm hour-cell" max="3"></td>
-                        <td class="material-cost-cell"><input type="number"
-                                class="form-control form-control-sm material-cost-cell-size" max="7"></td>
-                    </tr>
-                    <tr class="table-sum">
-                        <td>Summa</td>
-                        <td class="text-center">5</td>
-                        <td class="text-center">7 000:-</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="row table-responsive-sm mobile card" *ngIf="type == 'ROT'">
+                <table class="table">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th scope="col">Arbete</th>
+                            <th scope="col">Timmar</th>
+                            <th scope="col">Materialkostnad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of Rot.rows">
+                            <td>{{row.name}}</td>
+                            <td><input type="number" class="form-control form-control-sm hour-cell" max="1000" (change)="RotHourSum()" [(ngModel)]="row.hours" min="0"></td>
+                            <td><input type="number" class="form-control form-control-sm material-cost-cell-size" (change)="RotMaterialCostSum()" max="1000" [(ngModel)]="row.materialCost" min="0"></td>
+                        </tr>
+                        <tr class="table-sum">
+                            <td>Summa</td>
+                            <td>{{Rot.sumOfHours}}</td>
+                            <td>{{Rot.sumOfMaterialCost}}:-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row pt-5 table-responsive-sm" *ngIf="type == 'RUT'">
+                <table class="table">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th scope="col">Arbete</th>
+                            <th scope="col">Timmar</th>
+                            <th scope="col">Materialkostnad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of Rut.rows">
+                            <td>{{row.name}}</td>
+                            <td><input type="number" class="form-control form-control-sm hour-cell" max="1000" (change)="RutHourSum()" [(ngModel)]="row.hours" min="0"></td>
+                            <td><input type="number" class="form-control form-control-sm material-cost-cell-size" (change)="RutMaterialCostSum()" max="1000" [(ngModel)]="row.materialCost" min="0"></td>
+                        </tr>
+                        <tr class="table-sum">
+                            <td>Summa</td>
+                            <td>{{Rut.sumOfHours}}</td>
+                            <td>{{Rut.sumOfMaterialCost}}:-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
