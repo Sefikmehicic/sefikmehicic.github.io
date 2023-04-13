@@ -43,6 +43,10 @@ body{
 }
 
 /* FONT SIZES AND COLOR */
+.fs-small{
+    font-size: 0.8rem!important;
+}
+
 .fs-big{
     font-size: 6rem!important;
 }

@@ -12,10 +12,19 @@ export class CalculateComponent implements OnInit {
   type: string = "none";
   customerId: string = "";
   showInfo: boolean = false;
+  taxReduction: number = 0;
 
-  Rot: calc =
+    Customer: customer = {
+      name: 'Omar Jama',
+      address: 'Hammarögatan 13',
+      postalCodeAndCity: '123 40 Farsta',
+      offerNumber: '1001',
+      rotrut: 3000
+    };
+
+    Rot: offer =
     {
-      rows: [
+      work: [
         { name: 'Bygg', hours: 0, materialCost: 0 },
         { name: 'El', hours: 0, materialCost: 0 },
         { name: 'Glas/Plåt', hours: 0, materialCost: 0 },
@@ -25,12 +34,15 @@ export class CalculateComponent implements OnInit {
         { name: 'VVS', hours: 0, materialCost: 0 }
       ],
       sumOfHours: 0,
-      sumOfMaterialCost: 0
+      sumOfMaterialCost: 0,
+      otherExpenses: 0,
+      laborCost: 0,
+      totalCost: 0
     };
 
-    Rut: calc =
+    Rut: offer =
     {
-      rows: [
+      work: [
         { name: 'Barnpassning', hours: 0, materialCost: 0 },
         { name: 'Flyttjänster', hours: 0, materialCost: 0 },
         { name: 'IT-tjänster', hours: 0, materialCost: 0 },
@@ -44,7 +56,10 @@ export class CalculateComponent implements OnInit {
         { name: 'Trädgårdsarbete', hours: 0, materialCost: 0 }
       ],
       sumOfHours: 0,
-      sumOfMaterialCost: 0
+      sumOfMaterialCost: 0,
+      otherExpenses: 0,
+      laborCost: 0,
+      totalCost: 0
     };
 
   constructor(private router: Router, private route: ActivatedRoute) { }
@@ -54,25 +69,40 @@ export class CalculateComponent implements OnInit {
   }
 
   RotHourSum() {
-    this.Rot.sumOfHours = this.Rot.rows.map(i => i.hours).reduce(function (a, b) {
+    this.Rot.sumOfHours = this.Rot.work.map(i => i.hours).reduce(function (a, b) {
       return a + b;
     }, 0);
   }
-  RotMaterialCostSum() {
-    this.Rot.sumOfMaterialCost = this.Rot.rows.map(i => i.materialCost).reduce(function (a, b) {
+  RotCalculateSum() {
+    this.Rot.sumOfMaterialCost = this.Rot.work.map(i => i.materialCost).reduce(function (a, b) {
       return a + b;
     }, 0);
+    if(this.Rot.laborCost != 0 || this.Rot.laborCost != null){
+      this.Rot.totalCost = this.Rot.sumOfMaterialCost + (this.Rot.laborCost * 70/100) + this.Rot.otherExpenses;
+      this.taxReduction = 2000;
+    }
+    else{
+      this.Rot.totalCost = this.Rot.sumOfMaterialCost + this.Rot.otherExpenses;
+    }
+    this.taxReduction = (this.Rot.laborCost * 70/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rot.laborCost * 70/100);
   }
 
   RutHourSum(){
-    this.Rut.sumOfHours = this.Rut.rows.map(i => i.hours).reduce(function (a, b) {
+    this.Rut.sumOfHours = this.Rut.work.map(i => i.hours).reduce(function (a, b) {
       return a + b;
     }, 0);
   }
-  RutMaterialCostSum(){
-    this.Rut.sumOfMaterialCost = this.Rut.rows.map(i => i.materialCost).reduce(function (a, b) {
+  RutCalculateSum(){
+    this.Rut.sumOfMaterialCost = this.Rut.work.map(i => i.materialCost).reduce(function (a, b) {
       return a + b;
     }, 0);
+    if(this.Rut.laborCost != 0 || this.Rut.laborCost != null){
+      this.Rut.totalCost = this.Rut.sumOfMaterialCost + (this.Rut.laborCost * 50/100) + this.Rut.otherExpenses;
+    }
+    else{
+      this.Rut.totalCost = this.Rut.sumOfMaterialCost + this.Rut.otherExpenses;
+    }
+    this.taxReduction = (this.Rut.laborCost * 50/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rut.laborCost * 50/100);
   }
 
   search(): void {
@@ -96,14 +126,25 @@ export class CalculateComponent implements OnInit {
   }
 }
 
-export interface calc {
-  rows: rows[];
+export interface offer {
+  work: work[];
   sumOfHours: number;
   sumOfMaterialCost: number;
+  otherExpenses: number;
+  laborCost: number;
+  totalCost: number;
 }
 
-export interface rows {
+export interface work {
   name: string;
   hours: number;
   materialCost: number;
+}
+
+export interface customer {
+  name: string;
+  address: string;
+  postalCodeAndCity: string;
+  offerNumber: string;
+  rotrut: number;
 }
