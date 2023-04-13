@@ -11,3 +11,11 @@
 .tr:hover a{
     color: white;
 }
+
+.bi-check2{
+    color: var(--primary-color);
+}
+
+.bi-x{
+    color: red;
+}

@@ -1,65 +1,46 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-auto mt-3">
-            <p [hidden]="!create" (click)="create = false" class="fs-5 text-danger mb-0"><span class="bi bi-arrow-left-short"></span>Mina ärenden</p>
-            <button class="btn btn-primary" [hidden]="create" (click)="create = true">Nytt ärende <i class="bi bi-plus"></i></button>
+        <p class="fs-4">Mina offerter</p>
+        <hr class="border border-secondary border-2 opacity-75 m-2">
+        <div class="col-auto d-flex align-items-end pb-2">
+            <button class="btn btn-primary" routerLink="/dashboard/calculate">Skapa offert</button>
         </div>
     </div>
+</div>
+
+<div class="container-fluid">
     <div class="row">
         <div class="col">
-            <hr class="border border-secondary border-2 opacity-75">
-            <div [hidden]="create">
-                <p class="fs-4 mb-0">Mina ärenden</p>
-                <div class="card p-0" style="overflow-x:auto;">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr class="text-nowrap">
-                                <th></th>
-                                <th scope="col">Ärende nr</th>
-                                <th scope="col">Skapad</th>
-                                <th scope="col">Namn</th>
-                                <th scope="col">Adress</th>
-                                <th scope="col" style="text-align: center;">XML-fil</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="tr">
-                                <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
-                                <td>1003</td>
-                                <td>2023-02-08</td>
-                                <td>Omar Jama</td>
-                                <td>Hammarögatan 14, 123 40 FARSTA</td>
-                                <td class="text-center"><a href="">Ladda ner</a></td>
-                            </tr>
-                            <tr class="tr">
-                                <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
-                                <td>1002</td>
-                                <td>2023-01-15</td>
-                                <td>Göran Persson</td>
-                                <td>Hyltingeö Torps gård, 646 96 Stjärnhov</td>
-                                <td class="text-center"><a href="">Ladda ner</a></td>
-                            </tr>
-                            <tr class="tr">
-                                <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
-                                <td>1001</td>
-                                <td>2022-12-12</td>
-                                <td>Cosmo Kramer</td>
-                                <td>Skorpionens Gata 535, 136 61 HANINGE</td>
-                                <td class="text-center"><a href="">Ladda ner</a></td>
-                            </tr>
-                            <tr class="tr">
-                                <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
-                                <td>1000</td>
-                                <td>2022-11-08</td>
-                                <td>Sten Stensson</td>
-                                <td>Arkens Väg 14, 136 37 HANDEN</td>
-                                <td class="text-center"><a href="">Ladda ner</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="card p-0" style="overflow-x:auto;">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th></th>
+                            <th scope="col">Offertnummer</th>
+                            <th scope="col">Skapad</th>
+                            <th scope="col">Genomförd</th>
+                            <th scope="col">Namn</th>
+                            <th scope="col">Adress</th>
+                            <th scope="col">Totalt pris</th>
+                            <th scope="col">Pris efter skattereduktion</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr" *ngFor="let row of offers">
+                            <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
+                            <td>{{row.offerNumber}}</td>
+                            <td class="text-center">{{row.createdDate}}</td>
+                            <td class="text-center">{{row.doneDate}}</td>
+                            <td>{{row.customerName}}</td>
+                            <td>{{row.customerAddress}}</td>
+                            <td class="text-center">{{row.totalCost}}:-</td>
+                            <td class="text-center">{{row.totalCostAfterReduction}}:-</td>
+                            <td class="text-center"><i class="bi bi-check2 fs-4" *ngIf="row.status"></i><i class="bi bi-x fs-4" *ngIf="!row.status"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <app-create-case [hidden]="!create"></app-create-case>
 </div>
