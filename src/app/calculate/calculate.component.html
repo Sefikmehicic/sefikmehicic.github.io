@@ -75,7 +75,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="row pt-5 table-responsive-sm" *ngIf="type == 'RUT'">
+            <div class="row table-responsive-sm mobile card" *ngIf="type == 'RUT'">
                 <table class="table">
                     <thead>
                         <tr class="text-nowrap">
@@ -88,12 +88,21 @@
                         <tr *ngFor="let row of Rut.rows">
                             <td>{{row.name}}</td>
                             <td><input type="number" class="form-control form-control-sm hour-cell" max="1000" (change)="RutHourSum()" [(ngModel)]="row.hours" min="0"></td>
-                            <td><input type="number" class="form-control form-control-sm material-cost-cell-size" (change)="RutMaterialCostSum()" max="1000" [(ngModel)]="row.materialCost" min="0"></td>
+                            <td><input type="number" class="form-control form-control-sm material-cost-cell-size" (change)="RutMaterialCostSum()" max="100000" [(ngModel)]="row.materialCost" min="0"></td>
                         </tr>
                         <tr class="table-sum">
                             <td>Summa</td>
                             <td>{{Rut.sumOfHours}}</td>
                             <td>{{Rut.sumOfMaterialCost}}:-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table">
+                    <tbody>
+                        <tr class="text-nowrap">
+                            <td>Övriga kostnader</td>
+                            <td class="d-flex justify-content-center"><input type="number" class="form-control form-control-sm material-cost-cell-size" max="10000" min="0"></td>
                         </tr>
                     </tbody>
                 </table>
