@@ -12,7 +12,6 @@ export class CalculateComponent implements OnInit {
   type: string = "none";
   customerId: string = "";
   showInfo: boolean = false;
-  taxReduction: number = 0;
 
     Customer: customer = {
       name: 'Omar Jama',
@@ -38,6 +37,7 @@ export class CalculateComponent implements OnInit {
       otherExpenses: 0,
       laborCost: 0,
       totalCost: 0,
+      taxReduction: 0,
       totalCostAfterReduction: 0
     };
 
@@ -61,6 +61,7 @@ export class CalculateComponent implements OnInit {
       otherExpenses: 0,
       laborCost: 0,
       totalCost: 0,
+      taxReduction: 0,
       totalCostAfterReduction: 0
     };
 
@@ -85,8 +86,8 @@ export class CalculateComponent implements OnInit {
     else{
       this.Rot.totalCost = this.Rot.sumOfMaterialCost + this.Rot.otherExpenses;
     }
-    this.taxReduction = (this.Rot.laborCost * 70/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rot.laborCost * 70/100);
-    this.Rot.totalCostAfterReduction = this.Rot.totalCost - this.taxReduction;
+    this.Rot.taxReduction = (this.Rot.laborCost * 30/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rot.laborCost * 30/100);
+    this.Rot.totalCostAfterReduction = this.Rot.totalCost - this.Rot.taxReduction;
   }
 
   RutHourSum(){
@@ -104,8 +105,8 @@ export class CalculateComponent implements OnInit {
     else{
       this.Rut.totalCost = this.Rut.sumOfMaterialCost + this.Rut.otherExpenses;
     }
-    this.taxReduction = (this.Rut.laborCost * 50/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rut.laborCost * 50/100);
-    this.Rut.totalCostAfterReduction = this.Rut.totalCost - this.taxReduction;
+    this.Rut.taxReduction = (this.Rut.laborCost * 50/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rut.laborCost * 50/100);
+    this.Rut.totalCostAfterReduction = this.Rut.totalCost - this.Rut.taxReduction;
   }
 
   search(): void {
@@ -136,6 +137,7 @@ export interface offer {
   otherExpenses: number;
   laborCost: number;
   totalCost: number;
+  taxReduction: number;
   totalCostAfterReduction: number;
 }
 
