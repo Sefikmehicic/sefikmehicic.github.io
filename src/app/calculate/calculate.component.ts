@@ -37,7 +37,8 @@ export class CalculateComponent implements OnInit {
       sumOfMaterialCost: 0,
       otherExpenses: 0,
       laborCost: 0,
-      totalCost: 0
+      totalCost: 0,
+      totalCostAfterReduction: 0
     };
 
     Rut: offer =
@@ -59,7 +60,8 @@ export class CalculateComponent implements OnInit {
       sumOfMaterialCost: 0,
       otherExpenses: 0,
       laborCost: 0,
-      totalCost: 0
+      totalCost: 0,
+      totalCostAfterReduction: 0
     };
 
   constructor(private router: Router, private route: ActivatedRoute) { }
@@ -78,13 +80,13 @@ export class CalculateComponent implements OnInit {
       return a + b;
     }, 0);
     if(this.Rot.laborCost != 0 || this.Rot.laborCost != null){
-      this.Rot.totalCost = this.Rot.sumOfMaterialCost + (this.Rot.laborCost * 70/100) + this.Rot.otherExpenses;
-      this.taxReduction = 2000;
+      this.Rot.totalCost = this.Rot.sumOfMaterialCost + this.Rot.laborCost + this.Rot.otherExpenses;
     }
     else{
       this.Rot.totalCost = this.Rot.sumOfMaterialCost + this.Rot.otherExpenses;
     }
     this.taxReduction = (this.Rot.laborCost * 70/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rot.laborCost * 70/100);
+    this.Rot.totalCostAfterReduction = this.Rot.totalCost - this.taxReduction;
   }
 
   RutHourSum(){
@@ -97,12 +99,13 @@ export class CalculateComponent implements OnInit {
       return a + b;
     }, 0);
     if(this.Rut.laborCost != 0 || this.Rut.laborCost != null){
-      this.Rut.totalCost = this.Rut.sumOfMaterialCost + (this.Rut.laborCost * 50/100) + this.Rut.otherExpenses;
+      this.Rut.totalCost = this.Rut.sumOfMaterialCost + this.Rut.laborCost + this.Rut.otherExpenses;
     }
     else{
       this.Rut.totalCost = this.Rut.sumOfMaterialCost + this.Rut.otherExpenses;
     }
     this.taxReduction = (this.Rut.laborCost * 50/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rut.laborCost * 50/100);
+    this.Rut.totalCostAfterReduction = this.Rut.totalCost - this.taxReduction;
   }
 
   search(): void {
@@ -133,6 +136,7 @@ export interface offer {
   otherExpenses: number;
   laborCost: number;
   totalCost: number;
+  totalCostAfterReduction: number;
 }
 
 export interface work {

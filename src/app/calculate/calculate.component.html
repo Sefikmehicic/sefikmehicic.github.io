@@ -83,29 +83,40 @@
                     <table class="table table-sm table-borderless">
                         <tbody>
                             <tr class="text-nowrap">
-                                <td class="pt-5">Övriga kostnader</td>
-                                <td class="d-flex justify-content-center pt-5"><input type="number"
+                                <td class="pt-2">Övriga kostnader</td>
+                                <td class="d-flex justify-content-center pt-2"><input type="number"
                                         class="form-control form-control-sm material-cost-cell-size" max="10000"
                                         min="0" (change)="RotCalculateSum()" [(ngModel)]="Rot.otherExpenses"></td>
                             </tr>
                             <tr class="text-nowrap">
-                                <td class="pt-5">Arbetskostnad</td>
-                                <td class="d-flex justify-content-center pt-5"><input type="number"
+                                <td class="pt-2">Arbetskostnad</td>
+                                <td class="d-flex justify-content-center pt-2"><input type="number"
                                         class="form-control form-control-sm material-cost-cell-size" max="10000"
                                         min="0" (change)="RotCalculateSum()" [(ngModel)]="Rot.laborCost"></td>
+                            </tr>
+                            <tr class="text-nowrap">
+                                <td class="fs-5 fw-bold pt-2">Totalt</td>
+                                <td class="d-flex justify-content-center pt-2"><input type="number" disabled="true"
+                                        class="form-control form-control-sm material-cost-cell-size" max="100000"
+                                        min="0" [(ngModel)]="Rot.totalCost"></td>
                             </tr>
                             <tr>
                                 <td class="fs-small tax-reduction-color pt-5">Skattereduktion</td>
                                 <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">{{taxReduction}}:-</td>
                             </tr>
-                            <tr class="text-nowrap">
-                                <td class="fs-5 fw-bold">Totalt</td>
+                            <tr>
+                                <td class="fs-5 fw-bold">Totala kostnad efter Rot-avdrag</td>
                                 <td class="d-flex justify-content-center"><input type="number" disabled="true"
                                         class="form-control form-control-sm material-cost-cell-size" max="100000"
-                                        min="0" [(ngModel)]="Rot.totalCost"></td>
+                                        min="0" [(ngModel)]="Rot.totalCostAfterReduction"></td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="row m-0 pb-5 pt-5 d-flex justify-content-end">
+                    <div class="col-auto">
+                        <button class="btn btn-primary" [disabled]="Rot.totalCost == 0">Skapa offert</button>
+                    </div>
                 </div>
             </div>
             <div class="row mobile" *ngIf="type == 'RUT'">
@@ -138,20 +149,16 @@
                     <table class="table table-sm table-borderless">
                         <tbody>
                             <tr class="text-nowrap">
-                                <td class="pt-5">Övriga kostnader</td>
-                                <td class="d-flex justify-content-center pt-5"><input type="number"
+                                <td class="pt-2">Övriga kostnader</td>
+                                <td class="d-flex justify-content-center pt-2"><input type="number"
                                         class="form-control form-control-sm material-cost-cell-size" max="100000"
                                         min="0" (change)="RutCalculateSum()" [(ngModel)]="Rut.otherExpenses"></td>
                             </tr>
                             <tr class="text-nowrap">
-                                <td class="pt-5">Arbetskostnad</td>
-                                <td class="d-flex justify-content-center pt-5"><input type="number"
+                                <td class="pt-2">Arbetskostnad</td>
+                                <td class="d-flex justify-content-center pt-2"><input type="number"
                                         class="form-control form-control-sm material-cost-cell-size" max="100000"
                                         min="0" (change)="RutCalculateSum()" [(ngModel)]="Rut.laborCost"></td>
-                            </tr>
-                            <tr>
-                                <td class="fs-small tax-reduction-color pt-5">Skattereduktion</td>
-                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">{{taxReduction}}:-</td>
                             </tr>
                             <tr class="text-nowrap">
                                 <td class="fs-5 fw-bold">Totalt</td>
@@ -159,8 +166,23 @@
                                         class="form-control form-control-sm material-cost-cell-size" max="100000"
                                         min="0" [(ngModel)]="Rut.totalCost"></td>
                             </tr>
+                            <tr>
+                                <td class="fs-small tax-reduction-color pt-5">Skattereduktion</td>
+                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">{{taxReduction}}:-</td>
+                            </tr>
+                            <tr>
+                                <td class="fs-5 fw-bold">Totala kostnad efter Rut-avdrag</td>
+                                <td class="d-flex justify-content-center"><input type="number" disabled="true"
+                                        class="form-control form-control-sm material-cost-cell-size" max="100000"
+                                        min="0" [(ngModel)]="Rut.totalCostAfterReduction"></td>
+                            </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="row m-0 pb-5 pt-5 d-flex justify-content-end">
+                    <div class="col-auto">
+                        <button class="btn btn-primary" [disabled]="Rut.totalCost == 0">Skapa offert</button>
+                    </div>
                 </div>
             </div>
         </div>
