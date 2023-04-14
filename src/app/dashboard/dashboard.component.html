@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-auto" style="padding: 0px;">
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
       id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
@@ -12,19 +12,19 @@
       <div class="offcanvas-body p-0">
         <div class="list-group">
           <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="search"><i class="bi bi-search nav-icon"></i>Sök</a>
-          <hr class="nav-hr">
+          <!-- <hr class="nav-hr"> -->
           <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="calculate"><i class="bi bi-calculator nav-icon"></i>Räkna på arbete</a>
           <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="cases"><i class="bi bi-card-list nav-icon"></i>Offerter</a>
           <a class="nav-link fs-5 no-route"><i class="bi bi-person-circle nav-icon"></i>Min profil</a>
           <a class="nav-link fs-5 no-route"><i class="bi bi-chat-right-dots nav-icon"></i>Support</a>
           <a class="nav-link fs-5 no-route"><i class="bi bi-gear nav-icon"></i>Inställningar</a>
-          <hr class="nav-hr">
+          <!-- <hr class="nav-hr"> -->
           <button class="btn btn-danger" routerLink="/">Logga ut</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col" style="padding-right: 0;">
     <button class="btn btn-primary btn-collapse" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span class="bi bi-list"></span></button>
     <router-outlet></router-outlet>

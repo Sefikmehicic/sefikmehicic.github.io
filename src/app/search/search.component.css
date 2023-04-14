@@ -11,11 +11,11 @@ input[type='number']::-webkit-outer-spin-button,
 }
 
 .result{
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
 }
 
 .table{
-  color: white;
+  color: black;
 }
 
 .swing-in-top-fwd{-webkit-animation:swing-in-top-fwd 1s cubic-bezier(.175,.885,.32,1.275) both;animation:swing-in-top-fwd 1s cubic-bezier(.175,.885,.32,1.275) both}

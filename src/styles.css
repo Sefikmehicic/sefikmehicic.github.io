@@ -18,6 +18,9 @@
     --primary-color: #24595A;
     --primary-color-hover: #1e4a4b;
     --secondary-color: #2c8789;
+
+    /* Experimental colors */
+    --orange-cta: #eda85a;
 }
 
 .router-outlet {
@@ -38,8 +41,8 @@ body{
 }
 
 .section {
-    padding-top: 5vh;
-    padding-bottom: 10vh;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 /* FONT SIZES AND COLOR */
@@ -58,6 +61,11 @@ body{
 /* icon color */
 .icon-small{
     color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.icon-small-white{
+    color: white;
     font-size: 2rem;
 }
 
