@@ -9,25 +9,24 @@
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas-body p-0">
         <div class="list-group">
-          <a class="nav-link fs-4" routerLink="search"><i class="bi bi-search nav-icon"></i>Sök</a>
-          <hr class="mb-4">
-          <!-- <a class="nav-link fs-4" routerLink="cases"><i class="bi bi-card-text nav-icon"></i>Mina ärenden</a>
-          <a class="nav-link fs-4" routerLink="create-case"><i class="bi bi-plus-square nav-icon"></i>Skapa ärende</a> -->
-          <a class="nav-link fs-4" routerLink="calculate"><i class="bi bi-calculator nav-icon"></i>Räkna på arbete</a>
-          <a class="nav-link fs-4" routerLink="cases"><i class="bi bi-card-list nav-icon"></i>Offerter</a>
-          <a class="nav-link fs-4">Min profil</a>
-          <a class="nav-link fs-4">Support</a>
-          <a class="nav-link fs-4">Inställningar</a>
-          <a class="nav-link fs-4 d-flex justify-content-end align-items-end text-danger">Logga ut</a>
+          <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="search"><i class="bi bi-search nav-icon"></i>Sök</a>
+          <hr class="nav-hr">
+          <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="calculate"><i class="bi bi-calculator nav-icon"></i>Räkna på arbete</a>
+          <a class="nav-link fs-5" routerLinkActive="is-active" data-bs-toggle="offcanvas" routerLink="cases"><i class="bi bi-card-list nav-icon"></i>Offerter</a>
+          <a class="nav-link fs-5 no-route"><i class="bi bi-person-circle nav-icon"></i>Min profil</a>
+          <a class="nav-link fs-5 no-route"><i class="bi bi-chat-right-dots nav-icon"></i>Support</a>
+          <a class="nav-link fs-5 no-route"><i class="bi bi-gear nav-icon"></i>Inställningar</a>
+          <hr class="nav-hr">
+          <button class="btn btn-danger" routerLink="/">Logga ut</button>
         </div>
       </div>
     </div>
   </div>
   <div class="col">
-    <button class="btn btn-primary btn-collapse" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-        aria-controls="offcanvasScrolling"><span class="bi bi-list"></span></button>
-      <router-outlet></router-outlet>
+    <button class="btn btn-primary btn-collapse" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span class="bi bi-list"></span></button>
+    <router-outlet></router-outlet>
   </div>
 </div>

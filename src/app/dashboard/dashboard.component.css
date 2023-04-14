@@ -24,18 +24,32 @@
 }
 
 .offcanvas-body{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.nav-hr{
+    --bs-border-width: 2px;
 }
 
 .nav-link{
-    margin-bottom: 1rem;
+    opacity: 0.8;
+    padding: 1rem;
 }
 
 .nav-link:hover{
-    text-decoration: underline;
-    text-decoration-color: var(--primary-color);
+    opacity: 1;
 }
 
 .nav-icon{
     margin-right: 2rem;
+}
+
+.no-route{
+    text-decoration: line-through;
+}
+
+.is-active{
+    opacity: 1;
+    /* background-color: #34a5a7; */
+    background-color: var(--secondary-color);
 }
