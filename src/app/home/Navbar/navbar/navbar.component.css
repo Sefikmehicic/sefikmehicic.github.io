@@ -17,12 +17,14 @@
 }
 
 .nav-link{
+    opacity: 0.8;
     font-weight: bold;
     margin-right: 3vh;
-    color: var(--secondary-color);
+    color: black;
 }
 
 .nav-link:hover{
+    opacity: 1;
     color: var(--primary-color);
 }
 

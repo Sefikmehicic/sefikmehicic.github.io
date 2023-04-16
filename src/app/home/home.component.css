@@ -1,5 +1,11 @@
 .hero {
     background-image: linear-gradient(rgba(36, 89, 90, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/images/sthlm.jpg");
+    /* background-image:
+        linear-gradient(
+            15deg,
+            var(--primary-color) 40%,
+            var(--secondary-color) 100%
+        ); */
     height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +76,7 @@ transition: 0.3s;
     background-image:
         linear-gradient(
             15deg,
-            var(--primary-color) 50%,
+            var(--primary-color) 40%,
             var(--secondary-color) 100%
         );
     position: absolute;
