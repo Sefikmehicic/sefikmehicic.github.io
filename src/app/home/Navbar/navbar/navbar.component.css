@@ -12,8 +12,12 @@
     opacity: 1;
 }
 
+.sticky-top{
+    background-color: #FDFDFD;
+}
+
 .navbar {
-    padding: 2vh;
+    padding: 1vh;
 }
 
 .nav-link{

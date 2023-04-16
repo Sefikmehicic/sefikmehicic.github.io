@@ -84,3 +84,7 @@ transition: 0.3s;
     z-index: -1;
     transform: skewY(-3deg);
 }
+
+.gray-section{
+    background-color: #F3F5F9;
+}
