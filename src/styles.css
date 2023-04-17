@@ -73,7 +73,7 @@ body{
     font-size: 2rem;
 }
 
-.text-danger{
+/* .text-danger{
     cursor: pointer;
     color: red;
     text-decoration: none;
@@ -82,7 +82,7 @@ body{
 .text-danger:hover{
     text-decoration: underline;
     text-decoration-color: red;
-}
+} */
 
 .border-secondary{
     border-color: var(--secondary-color)!important;
