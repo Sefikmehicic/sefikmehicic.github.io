@@ -21,6 +21,8 @@
 
     /* Experimental colors */
     --orange-cta: #eda85a;
+    --orange-cta-2: #db742f;
+    --orange-cta-2-hover: #b4612a;
 }
 
 .router-outlet {
@@ -86,8 +88,8 @@ body{
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--orange-cta-2);
+    border-color: var(--orange-cta-2);
 }
 
 .btn-primary:disabled {
@@ -98,13 +100,13 @@ body{
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover);
+    background-color: var(--orange-cta-2-hover);
+    border-color: var(--orange-cta-2-hover);
 }
 
 .btn-primary:focus {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--orange-cta-2);
+    border-color: var(--orange-cta-2);
 }
 
 .form-control:disabled {

@@ -17,18 +17,38 @@
 }
 
 .navbar {
+    background-color: var(--secondary-color);
     padding: 1vh;
 }
 
+.navbar-inverse {
+    background-color: white !important;
+    transition: background-color 200ms linear;
+  }
+
+.navbar-inverse .nav-link {
+    color: black!important;
+    background-color: white !important;
+    transition-property: font-color, background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+.navbar-inverse .btn-login{
+    color: var(--orange-cta-2);
+}
+
+.navbar-inverse .bi-list {
+    color: var(--secondary-color);
+}
+
 .nav-link{
-    opacity: 0.8;
     font-weight: bold;
     margin-right: 3vh;
-    color: black;
+    color: white;
 }
 
 .nav-link:hover{
-    opacity: 1;
     color: var(--primary-color);
 }
 
@@ -41,8 +61,8 @@
     border: none;
 }
 
-.navbar-toggler:focus{
-    border: none;
+.bi-list{
+    color: white;
 }
 
 .navbar-brand {
@@ -55,11 +75,15 @@
 }
 
 .btn-login{
-    border-color: var(--primary-color);
-    color: var(--secondary-color);
+    border-color: var(--orange-cta-2);
+    color: white
+}
+
+.btn-login:active{
+    background-color: var(--orange-cta-2);
 }
 
 .btn-login:hover{
-    background-color: var(--primary-color);
+    background-color: var(--orange-cta-2);
     color: white;
 }

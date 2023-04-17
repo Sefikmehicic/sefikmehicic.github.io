@@ -39,6 +39,10 @@ transition: 0.3s;
     width: 70%;
 }
 
+.example-image{
+width: 20%;
+}
+
   /* IPHONE SCREEN SETTINGS */
 @media screen and (max-width: 415px){
     .card-includes{
@@ -84,7 +88,7 @@ transition: 0.3s;
 }
 
 .gray-section{
-    background-color: #FDFDFD;
+    background-color: #d1d1d1;
 }
 
 .gray-content{
