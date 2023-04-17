@@ -3,15 +3,18 @@
     <p class="fs-1">Se dina kunders rot- och rut direkt i mobilen!</p>
   </div>
 </div> -->
-<div class="container hero-section">
+<div class="container">
   <div class="row d-flex align-items-center">
-    <div class="col-lg-6 col-md-6 col">
+    <div class="col-lg-6 col-md-6 col pt-5">
       <p class="fs-big fw-bold header-text"><span class="fc-secondary">Vad är</span><br>ROTUR?</p>
       <p class="fs-5">Äntligen kan du se dina kunders<br>rot- & rut-avdrag direkt på skärmen!</p>
-      <button class="btn btn-primary fs-5" routerLink="/Login">Läs mer!</button>
+      <nav id="navbar-example2">
+        <a class="btn btn-primary fs-5" href="#scrollspyHeading1">Läs mer!</a>
+      </nav>
+      
     </div>
-    <div class="col-lg-6 col-12 col pt-5 d-flex justify-content-center">
-      <img width="80%" src="../../assets/images/iPhone_3.png" alt="image">
+    <div class="col-lg-6 col-12 col pt-5 pb-5 d-flex justify-content-center">
+      <img class="hero-img" src="../../assets/images/iPhone_3.png" alt="image">
     </div>
   </div>
 </div>
@@ -40,50 +43,124 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="section">
-    <div class="col text-center">
-      <p class="fs-1">Det här <span class="fw-bold">ingår</span> i Rotur</p>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card">
-          <p class="fs-4 text-center fw-bold">Sök på kunder</p>
-          <p class="fs-5">Söka och kontrollera kunders uppgifter direkt på skärmen!</p>
-          <p class="fs-5">Via Rotur får du uppdaterade uppgifter direkt från Skatteverket!</p>
-        </div>
+<div class="d-flex">
+  <div class="container">
+    <div class="section">
+      <div class="col text-center">
+        <p class="fs-1">Det här <span class="fw-bold">ingår</span> i Rotur</p>
       </div>
-      <div class="col-lg-4">
-        <div class="card">
-          <p class="fs-4 text-center fw-bold">Mina ärenden</p>
-          <p class="fs-5">Skapa ärende och begär tillbaka rot- & rutavdrag från Skatteverket!</p>
-          <p class="fs-5">Via vår tjänst kan du
-            automatiskt skapa en XML-fil som du sen laddar upp direkt till Skatteverket!</p>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card card-includes">
+            <p class="fs-4 text-center fw-bold">Sök på kunder</p>
+            <p class="fs-5">Söka och kontrollera kunders uppgifter direkt på skärmen!</p>
+            <p class="fs-5">Via Rotur får du uppdaterade uppgifter direkt från Skatteverket!</p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card">
-          <p class="fs-4 text-center fw-bold">Räkna och skicka offert</p>
-          <p class="fs-5">Verktyg för att enkelt räkna på jobbet som ska göras.</p>
-          <p class="fs-5">Räkna ut vad jobbet preliminärt kommer att kosta för kunden där rot & rut automatiskt dras av!
-          </p>
-          <p class="fs-5">Skicka offert till kunden direkt i verktyget</p>
+        <div class="col-lg-4">
+          <div class="card card-includes">
+            <p class="fs-4 text-center fw-bold">Mina ärenden</p>
+            <p class="fs-5">Skapa ärende och begär tillbaka rot- & rutavdrag från Skatteverket!</p>
+            <p class="fs-5">Via vår tjänst kan du
+              automatiskt skapa en XML-fil som du sen laddar upp direkt till Skatteverket!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-includes">
+            <p class="fs-4 text-center fw-bold">Räkna och skicka offert</p>
+            <p class="fs-5">Verktyg för att enkelt räkna på jobbet som ska göras.</p>
+            <p class="fs-5">Räkna ut vad jobbet preliminärt kommer att kosta för kunden där rot & rut automatiskt dras av!
+            </p>
+            <p class="fs-5">Skicka offert till kunden direkt i verktyget</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- <div class="container section">
   <div class="col-lg-12 pt-5 d-flex justify-content-center" style="overflow-x:auto;">
     <img class="img-fluid" src="../../assets/images/TIMELINE2.png" alt="image">
   </div>
 </div> -->
+
 <div class="">
-  <div class="container pb-5">
+  <div class="container section">
+    <div class="text-center">
+      <p class="fs-1 text-danger">[Experiment]</p>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item shadow-sm">
+        <h2 class="accordion-header" id="exampleHeadingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ExampleCollapseOne" aria-expanded="true" aria-controls="ExampleCollapseOne">
+            <p class="fs-4 m-0">Se din kunds rot & rut direkt på skärmen</p>
+          </button>
+        </h2>
+        <div id="ExampleCollapseOne" class="accordion-collapse collapse" aria-labelledby="exampleHeadingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body gray-section">
+              <div class="pb-5 d-flex justify-content-center">
+                <img class="hero-img" src="../../assets/images/Example_image_1.png" alt="image">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item shadow-sm">
+        <h2 class="accordion-header" id="exampleHeadingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ExampleCollapseTwo" aria-expanded="true" aria-controls="ExampleCollapseTwo">
+            <p class="fs-4 m-0">Räkna på arbetet i vårt smarta verktyg</p>
+          </button>
+        </h2>
+        <div id="ExampleCollapseTwo" class="accordion-collapse collapse" aria-labelledby="exampleHeadingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body gray-section">
+              <div class="pb-5 d-flex justify-content-center">
+                <img width="40%" src="../../assets/images/Example_image_2.png" alt="image">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="scrollspyHeading1">
+  <div class="container-fluid scrollspy-example" data-bs-spy="scroll" data-bs-target="#scrollspyHeading1" data-bs-smooth-scroll="true">
+    <div class="row">
+      <div class="card-company col-lg-6 section">
+        <div class="col-lg-6 offset-lg-3">
+          <p class="fs-1 text-center mb-5">För dig som Företag</p>
+          <ul class="fs-4">
+            <li class="li-mb">Se din kunds rot- & rut direkt på skärmen!</li>
+            <li class="li-mb">Verktyg för att enkelt räkna på arbetet där rot & rut automatiskt dras av för din specifika kund.</li>
+            <li class="li-mb">Skapa en offert direkt i verktyget som enkelt skickas till kund med preliminärt avdrag.</li>
+            <li>Alla dina offerter samlade på en och samma plats.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-private col-lg-6 section">
+        <div class="col-lg-6 offset-lg-3">
+          <p class="fs-1 text-center mb-5">För dig som kund</p>
+          <ul class="fs-4">
+            <li class="li-mb">Va säker på att företaget du anlitar sköter allt gällande rot & rut, företag som använder rotur har full koll!</li>
+            <li class="li-mb">Mer text som vi kommer på sen</li>
+            <li class="li-mb">Mer text som vi kommer på sen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container section">
     <div class="text-center">
       <p class="fs-1">Vanliga frågor</p>
     </div>
-    <div class="accordion" id="accordionExample">
+    <div class="accordion" id="accordionQnA">
       <div class="accordion-item shadow-sm">
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -92,7 +169,7 @@
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
+          data-bs-parent="#accordionQnA">
           <div class="accordion-body">
             <p class="fs-5 mt-2">Lorem ipsum dolor sit amet At vero eos et accusamus et iusto odio dignissimos amet At
               vero eos et eos et accusamus et iusto odio dignissimos</p>
@@ -107,7 +184,7 @@
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
+          data-bs-parent="#accordionQnA">
           <div class="accordion-body">
             <p class="fs-5 mt-2">Lorem ipsum dolor sit amet At vero eos et accusamus et iusto odio dignissimos amet At
               vero eos et eos et accusamus et iusto odio dignissimos amet At vero eos e</p>
@@ -122,7 +199,7 @@
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
+          data-bs-parent="#accordionQnA">
           <div class="accordion-body">
             <p class="fs-5 mt-2">Lorem ipsum dolor sit amet At vero eos et accusamus et iusto odio dignissimos amet At
               vero eos et Lorem ipsum dolor sit amet At</p>
