@@ -36,7 +36,7 @@ transition: 0.3s;
   }
 
 .hero-img{
-    width: 80%;
+    width: 70%;
 }
 
   /* IPHONE SCREEN SETTINGS */
@@ -44,6 +44,10 @@ transition: 0.3s;
     .card-includes{
         background-color: var(--secondary-color);
         color: white;
+    }
+
+    .hero-img{
+        width: 100%;
     }
 }
 
@@ -59,16 +63,6 @@ transition: 0.3s;
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
-
-/* .green-section{
-    color: white;
-    background-image:
-        linear-gradient(
-            45deg,
-            var(--primary-color) 40%,
-            var(--secondary-color) 100%
-        );
-} */
 
 .green-section{
     position: relative;
@@ -114,4 +108,18 @@ transition: 0.3s;
 
 .li-mb {
     margin-bottom: 2rem;
+}
+
+.wave-section {
+    background-size:cover;
+    /* 20% */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232c8789' fill-opacity='0.2' d='M0,160L48,181.3C96,203,192,245,288,256C384,267,480,245,576,224C672,203,768,181,864,154.7C960,128,1056,96,1152,106.7C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E"); */
+    
+    /* 100% secondary color */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232c8789' fill-opacity='1' d='M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,240C960,213,1056,139,1152,128C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+    color: white;
+
+    /* 30% secondary color */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232c8789' fill-opacity='0.3' d='M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,240C960,213,1056,139,1152,128C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+    color: black; */
 }

@@ -73,17 +73,6 @@ body{
     font-size: 2rem;
 }
 
-/* .text-danger{
-    cursor: pointer;
-    color: red;
-    text-decoration: none;
-}
-
-.text-danger:hover{
-    text-decoration: underline;
-    text-decoration-color: red;
-} */
-
 .border-secondary{
     border-color: var(--secondary-color)!important;
 }
