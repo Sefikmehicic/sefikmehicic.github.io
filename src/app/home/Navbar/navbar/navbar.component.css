@@ -4,13 +4,13 @@
     }
 }
 
-.logo{
+/* .logo{
     opacity: 0.8;
 }
 
 .logo:hover{
     opacity: 1;
-}
+} */
 
 .sticky-top{
     background-color: #FDFDFD;
@@ -86,4 +86,8 @@
 .btn-login:hover{
     background-color: var(--orange-cta-2);
     color: white!important;
+}
+
+.remove {
+    display: none;
 }
