@@ -1,9 +1,5 @@
-<div class="">
-    <div class="">
-        <p class="fs-4">Räkna på arbete</p>
-        <hr class="border border-secondary border-2 opacity-75">
-    </div>
-</div>
+<p class="fs-4">Räkna på arbete</p>
+<hr class="border border-secondary border-2 opacity-75">
 <div class="calculate-container pt-3">
     <div class="container">
         <div class="col-lg-6 offset-lg-3 col mobile">
@@ -70,8 +66,8 @@
                                 <td><input type="number" class="form-control form-control-sm hour-cell" max="1000"
                                         (change)="RotHourSum()" [(ngModel)]="row.hours" min="0"></td>
                                 <td><input type="number" class="form-control form-control-sm material-cost-cell-size"
-                                        (change)="RotCalculateSum()" max="1000" [(ngModel)]="row.materialCost"
-                                        min="0"></td>
+                                        (change)="RotCalculateSum()" max="1000" [(ngModel)]="row.materialCost" min="0">
+                                </td>
                             </tr>
                             <tr class="table-sum">
                                 <td>Summa</td>
@@ -85,14 +81,14 @@
                             <tr class="text-nowrap">
                                 <td class="pt-2">Övriga kostnader</td>
                                 <td class="d-flex justify-content-center pt-2"><input type="number"
-                                        class="form-control form-control-sm material-cost-cell-size" max="10000"
-                                        min="0" (change)="RotCalculateSum()" [(ngModel)]="Rot.otherExpenses"></td>
+                                        class="form-control form-control-sm material-cost-cell-size" max="10000" min="0"
+                                        (change)="RotCalculateSum()" [(ngModel)]="Rot.otherExpenses"></td>
                             </tr>
                             <tr class="text-nowrap">
                                 <td class="pt-2">Arbetskostnad</td>
                                 <td class="d-flex justify-content-center pt-2"><input type="number"
-                                        class="form-control form-control-sm material-cost-cell-size" max="10000"
-                                        min="0" (change)="RotCalculateSum()" [(ngModel)]="Rot.laborCost"></td>
+                                        class="form-control form-control-sm material-cost-cell-size" max="10000" min="0"
+                                        (change)="RotCalculateSum()" [(ngModel)]="Rot.laborCost"></td>
                             </tr>
                             <tr class="text-nowrap">
                                 <td class="fs-5 fw-bold pt-2">Totalt</td>
@@ -102,7 +98,8 @@
                             </tr>
                             <tr>
                                 <td class="fs-small tax-reduction-color pt-5">Skattereduktion</td>
-                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">{{Rot.taxReduction}}:-</td>
+                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">
+                                    {{Rot.taxReduction}}:-</td>
                             </tr>
                             <tr>
                                 <td class="fs-5 fw-bold">Totala kostnad efter Rot-avdrag</td>
@@ -168,7 +165,8 @@
                             </tr>
                             <tr>
                                 <td class="fs-small tax-reduction-color pt-5">Skattereduktion</td>
-                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">{{Rut.taxReduction}}:-</td>
+                                <td class="fs-small tax-reduction-color pt-5 d-flex justify-content-center">
+                                    {{Rut.taxReduction}}:-</td>
                             </tr>
                             <tr>
                                 <td class="fs-5 fw-bold">Totala kostnad efter Rut-avdrag</td>

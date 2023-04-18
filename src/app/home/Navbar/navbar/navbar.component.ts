@@ -15,13 +15,16 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
 
 onWindowScroll() {
-    let element = document.querySelector('.navbar') as HTMLElement;
-    if (window.pageYOffset > element.clientHeight) {
-      element.classList.add('navbar-inverse');
-      element.classList.add('shadow-sm');
+    let navbar = document.querySelector('.navbar') as HTMLElement;
+    let mobileMenu = document.querySelector('.navbarSupportedContent') as HTMLElement;
+
+    if (window.pageYOffset > navbar.clientHeight) {
+      navbar.classList.add('navbar-inverse');
+      navbar.classList.add('shadow-sm');
+      
     } else {
-      element.classList.remove('navbar-inverse');
-      element.classList.remove('shadow-sm');
+      navbar.classList.remove('navbar-inverse');
+      navbar.classList.remove('shadow-sm');
     }
   }
 }

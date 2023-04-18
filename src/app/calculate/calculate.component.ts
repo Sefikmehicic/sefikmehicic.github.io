@@ -14,9 +14,9 @@ export class CalculateComponent implements OnInit {
   showInfo: boolean = false;
 
     Customer: customer = {
-      name: 'Omar Jama',
-      address: 'Hammarögatan 13',
-      postalCodeAndCity: '123 40 Farsta',
+      name: 'Eva Larsson',
+      address: 'Götgatan 35',
+      postalCodeAndCity: '116 21 Stockholm',
       offerNumber: '1001',
       rotrut: 3000
     };

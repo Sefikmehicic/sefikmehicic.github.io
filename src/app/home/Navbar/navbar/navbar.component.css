@@ -85,5 +85,5 @@
 
 .btn-login:hover{
     background-color: var(--orange-cta-2);
-    color: white;
+    color: white!important;
 }

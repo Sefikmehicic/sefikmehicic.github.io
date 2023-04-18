@@ -1,17 +1,21 @@
-<div class="container-fluid pb-0">
-    <div class="row">
-        <p class="fs-4">Sök på personnummer</p>
-        <hr class="border border-secondary border-2 opacity-75 m-2">
-        <div class="col-auto">
-            <input type="number" [(ngModel)]="userInput" [disabled]="!result"
-                class="form-control form-control-lg text-center fs-5" id="floatingInput" max="12"
-                placeholder="Personnummer">
-            <p class="text-danger text-center" [hidden]="blankInput">Fältet är tomt</p>
-        </div>
-        <div class="col-auto d-flex align-items-end">
-            <button class="btn btn-primary" [hidden]="!showSpinner" (click)="Search()">{{searchBtnText}}</button>
-            <div class="spinner-border text-center" [hidden]="showSpinner" role="status">
-                <span class="visually-hidden">Loading...</span>
+<p class="fs-4">Sök</p>
+<hr class="border border-secondary border-2 opacity-75 m-2">
+<div class="container pb-0">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <p class="fs-5 fw-bold">Sök på personnummer</p>
+            <div class="card">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center">
+                        <input type="number" [(ngModel)]="userInput" [disabled]="!result"
+                            placeholder="Kundens personnummer" class="form-control text-center mb-3" id="floatingInput" max="12">
+                        <button class="btn btn-primary" [hidden]="!showSpinner"
+                            (click)="Search()">{{searchBtnText}}</button>
+                        <span class="spinner-border text-center" [hidden]="showSpinner" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -30,11 +34,11 @@
                             </tr>
                             <tr>
                                 <td>Namn</td>
-                                <td class="text-end">Omar Jama</td>
+                                <td class="text-end">Eva Larsson</td>
                             </tr>
                             <tr>
                                 <td>Adress</td>
-                                <td class="text-end">Hammarögatan 14<br>123 40 FARSTA</td>
+                                <td class="text-end">Götgatan 35<br>116 21</td>
                             </tr>
                             <tr>
                                 <td>Fastighetsbeteckning</td>
@@ -108,7 +112,8 @@
         <div class="row">
             <!-- <hr class="border border-secondary border-2 opacity-75"> -->
             <div class="col text-end mobile">
-                <button class="btn btn-primary" routerLink="/dashboard/calculate" [queryParams]="{id: userInput}">Räkna på
+                <button class="btn btn-primary" routerLink="/dashboard/calculate" [queryParams]="{id: userInput}">Räkna
+                    på
                     arbete</button>
             </div>
         </div>

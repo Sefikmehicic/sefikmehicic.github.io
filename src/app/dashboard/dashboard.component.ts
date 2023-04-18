@@ -18,4 +18,8 @@ export class DashboardComponent implements OnInit {
     $('#navbar').show();
     $('#footer').show();
   }
+
+  toggleNavIcon(): void {
+    $('#navbar-toggler').toggleClass('bi-x-lg bi-list');
+  }
 }

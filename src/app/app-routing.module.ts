@@ -9,6 +9,7 @@ import { CreateCaseComponent } from './create-case/create-case.component';
 import { CalculateComponent } from './calculate/calculate.component';
 import { CasesComponent } from './cases/cases.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardHomeComponent } from './dashboard/home/home.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -40,6 +41,9 @@ const routes: Routes = [
       },
       {
         path: 'calculate', component: CalculateComponent
+      },
+      {
+        path: 'home', component: DashboardHomeComponent
       }
     ]
   }

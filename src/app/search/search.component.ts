@@ -23,7 +23,6 @@ export class SearchComponent implements OnInit {
     }
     else{
       if(this.result){
-        this.blankInput = true;
         this.showSpinner = false;
         this.result = true;
         setTimeout(() =>{
