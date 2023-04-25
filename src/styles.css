@@ -95,8 +95,8 @@ body{
 .btn-primary:disabled {
     pointer-events: none;
     opacity: 0.65;
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--orange-cta-2);
+    border-color: var(--orange-cta-2);
 }
 
 .btn-primary:hover {

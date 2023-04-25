@@ -1,9 +1,11 @@
 <div class="container-fluid">
     <div class="row">
         <p class="fs-4">Mina offerter</p>
-        <hr class="border border-secondary border-2 opacity-75 m-2">
         <div class="col-auto d-flex align-items-end pb-2">
             <button class="btn btn-primary" routerLink="/dashboard/calculate">Skapa offert</button>
+            <button class="btn btn-primary ms-1 position-relative" (click)="downloadPDF()">Ladda ner <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                BETA
+              </span></button>
         </div>
     </div>
 </div>
@@ -11,11 +13,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <div class="card p-0" style="overflow-x:auto;">
-                <table class="table table-bordered">
+            <div  class="card p-0" style="overflow-x:auto;">
+                <table id="table" class="table table-bordered">
                     <thead>
                         <tr class="text-nowrap">
-                            <!-- <th></th> -->
                             <th scope="col">Offertnummer</th>
                             <th scope="col">Skapad</th>
                             <th scope="col">Genomförd</th>
@@ -27,8 +28,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tr" *ngFor="let row of offers">
-                            <!-- <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td> -->
+                        <tr class="tr" *ngFor="let row of offers" (click)="openModal(template, row)">
                             <td data-cell="Offertnummer">{{row.offerNumber}}</td>
                             <td data-cell="Skapad" class="text-center">{{row.createdDate}}</td>
                             <td data-cell="Genomförd" class="text-center">{{row.doneDate}}</td>
@@ -44,3 +44,15 @@
         </div>
     </div>
 </div>
+
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left display-6">{{chosenRow.customerName}}</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      
+    </div>
+  </ng-template>

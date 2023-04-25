@@ -19,24 +19,25 @@
         transition-timing-function: linear;
     }
 
-    .offcanvas-body{
-        padding: 0!important;
-    }
-
     .close-btn{
         display: none;
     }
 }
 
+.offcanvas-body{
+    padding: 0!important;
+}
+
 .dashboard-navbar{
     background-color: white;
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 .navbar-toggler{
     opacity: 0.8;
     border: none;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .navbar-toggler:hover{

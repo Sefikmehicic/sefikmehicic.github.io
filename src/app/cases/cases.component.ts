@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+
+declare var html2pdf: any;
 
 @Component({
   selector: 'app-cases',
@@ -7,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./cases.component.css']
 })
 export class CasesComponent implements OnInit {
+  modalRef?: BsModalRef;
+  chosenRow!: offerRow;
 
   offers: offerRow[] = [{
     offerNumber: '1001',
@@ -60,7 +65,26 @@ export class CasesComponent implements OnInit {
   }
 ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: BsModalService) { }
+
+  openModal(template: TemplateRef<any>, row: offerRow) {
+    this.chosenRow = row;
+    console.log(this.chosenRow);
+    this.modalRef = this.modalService.show(template);
+  }
+
+  downloadPDF():void {
+    var element = document.getElementById('table');
+    var opt = {
+      pagebreak: 'avoid-all',
+      filename:     'myfile.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { orientation: 'landscape' }
+    };
+
+    html2pdf().set(opt).from(element).save();
+  }
 
   ngOnInit(): void {
   }
@@ -76,14 +100,3 @@ export interface offerRow{
   totalCostAfterReduction: number;
   status: boolean;
 }
-
-// export interface offer {
-//   work: work[];
-//   sumOfHours: number;
-//   sumOfMaterialCost: number;
-//   otherExpenses: number;
-//   laborCost: number;
-//   totalCost: number;
-//   taxReduction: number;
-//   totalCostAfterReduction: number;
-// }

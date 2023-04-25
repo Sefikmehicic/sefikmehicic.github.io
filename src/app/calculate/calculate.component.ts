@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { __values } from 'tslib';
 
 @Component({
@@ -9,6 +10,7 @@ import { __values } from 'tslib';
 })
 
 export class CalculateComponent implements OnInit {
+  modalRef?: BsModalRef;
   type: string = "none";
   customerId: string = "";
   showInfo: boolean = false;
@@ -65,7 +67,7 @@ export class CalculateComponent implements OnInit {
       totalCostAfterReduction: 0
     };
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private modalService: BsModalService) { }
 
   typeOfWork(value: any) {
     this.type = value.target.value;
@@ -107,6 +109,10 @@ export class CalculateComponent implements OnInit {
     }
     this.Rut.taxReduction = (this.Rut.laborCost * 50/100) > this.Customer.rotrut ?  this.Customer.rotrut : (this.Rut.laborCost * 50/100);
     this.Rut.totalCostAfterReduction = this.Rut.totalCost - this.Rut.taxReduction;
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 
   search(): void {
