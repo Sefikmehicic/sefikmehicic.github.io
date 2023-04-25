@@ -15,7 +15,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr class="text-nowrap">
-                            <th></th>
+                            <!-- <th></th> -->
                             <th scope="col">Offertnummer</th>
                             <th scope="col">Skapad</th>
                             <th scope="col">Genomförd</th>
@@ -28,15 +28,15 @@
                     </thead>
                     <tbody>
                         <tr class="tr" *ngFor="let row of offers">
-                            <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td>
-                            <td>{{row.offerNumber}}</td>
-                            <td class="text-center">{{row.createdDate}}</td>
-                            <td class="text-center">{{row.doneDate}}</td>
-                            <td>{{row.customerName}}</td>
-                            <td>{{row.customerAddress}}</td>
-                            <td class="text-center">{{row.totalCost}}:-</td>
-                            <td class="text-center">{{row.totalCostAfterReduction}}:-</td>
-                            <td class="text-center"><i class="bi bi-check2 fs-4" *ngIf="row.status"></i><i class="bi bi-x fs-4" *ngIf="!row.status"></i></td>
+                            <!-- <td class="checkbox text-center"><input class="form-check-input" type="checkbox"></td> -->
+                            <td data-cell="Offertnummer">{{row.offerNumber}}</td>
+                            <td data-cell="Skapad" class="text-center">{{row.createdDate}}</td>
+                            <td data-cell="Genomförd" class="text-center">{{row.doneDate}}</td>
+                            <td data-cell="Namn">{{row.customerName}}</td>
+                            <td data-cell="Adress">{{row.customerAddress}}</td>
+                            <td data-cell="Totalt pris" class="text-center">{{row.totalCost}}:-</td>
+                            <td data-cell="Pris efter skattereduktion" class="text-center">{{row.totalCostAfterReduction}}:-</td>
+                            <td data-cell="Status" class="text-center"><i class="bi bi-check2 fs-4" *ngIf="row.status"></i><i class="bi bi-x fs-4" *ngIf="!row.status"></i></td>
                         </tr>
                     </tbody>
                 </table>

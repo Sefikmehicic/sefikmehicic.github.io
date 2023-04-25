@@ -1,6 +1,6 @@
 @media (min-width: 915px) {
     .offcanvas{
-        /* width: 20rem; */
+        width: 20rem;
         min-height: 100vh;
         height: 100%;
         position: relative;
@@ -29,13 +29,13 @@
 }
 
 .dashboard-navbar{
-    background-color: var(--primary-color);
+    background-color: white;
 }
 
 .navbar-toggler{
     opacity: 0.8;
     border: none;
-    color: white;
+    color: var(--primary-color);
     font-size: 2.5rem;
 }
 
@@ -44,11 +44,11 @@
 }
 
 .offcanvas{
-    color: white;
+    color: black;
 }
 
 .offcanvas-body{
-    background-color: var(--primary-color);
+    background-color: white
 }
 
 .nav-hr{
@@ -58,10 +58,12 @@
 .nav-link{
     opacity: 0.8;
     margin: 0;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .nav-link:hover{
+    background-color: #F5F7F9;
+    color: var(--primary-color);
     opacity: 1;
 }
 
@@ -75,13 +77,14 @@
 
 .is-active{
     opacity: 1;
-    /* background-color: #34a5a7; */
-    background-color: var(--secondary-color);
+    background-color: #F5F7F9;
+    color: var(--primary-color);
+    border-left: var(--primary-color) 5px solid;
 }
 
 .close-btn{
     opacity: 0.7;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 

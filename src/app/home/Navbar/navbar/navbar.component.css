@@ -4,14 +4,6 @@
     }
 }
 
-/* .logo{
-    opacity: 0.8;
-}
-
-.logo:hover{
-    opacity: 1;
-} */
-
 .sticky-top{
     background-color: #FDFDFD;
 }
@@ -50,6 +42,10 @@
 
 .nav-link:hover{
     color: var(--primary-color);
+}
+
+.navbar-inverse .nav-link:hover{
+    color: var(--secondary-color)!important;
 }
 
 .bi-list{

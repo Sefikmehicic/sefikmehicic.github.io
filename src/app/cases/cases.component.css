@@ -1,5 +1,42 @@
+/* IPHONE SCREEN SETTINGS */
+/* 650px? */
+@media screen and (max-width: 650px){
+    .card-includes{
+        background-color: var(--secondary-color);
+        color: white;
+    }
+
+    .hero-img{
+        width: 100%;
+    }
+
+    th{
+        display: none;
+    }
+
+    td{
+        text-align: left!important;
+        display: grid;
+        padding: .75rem 1rem;
+    }
+
+    td:first-child{
+        padding-top: 2rem;
+    }
+
+    td:last-child{
+        padding-bottom: 2rem;
+    }
+
+    td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
 .tr{
-    white-space: nowrap!important;
+    /* white-space: nowrap!important; */
 }
 
 .tr:hover{
