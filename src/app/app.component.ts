@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ROTUR';
+
+  public testFunction(text: string): string {
+    text += ' Tillagd text!';
+    return text;
+  }
 }

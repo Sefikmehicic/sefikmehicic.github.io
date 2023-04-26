@@ -9,7 +9,7 @@
                         <tr>
                             <td>Köparens personnummer</td>
                             <td class="d-flex"><input type="number" class="form-control text-center" id="customerId"
-                                    max="12" [(ngModel)]="customerId">
+                                    max="12" [(ngModel)]="newOffer.CustomerID">
                                 <button class="btn btn-primary" (click)="search()">Sök</button>
                             </td>
                         </tr>
@@ -178,7 +178,8 @@
                 </div>
                 <div class=" m-0 pb-5 pt-5 d-flex justify-content-end">
                     <div class="col-auto">
-                        <button class="btn btn-primary" (click)="openModal(template)" [disabled]="Rut.totalCost == 0">Skapa offert</button>
+                        <!-- <button class="btn btn-primary" (click)="openModal(template)" [disabled]="Rut.totalCost == 0">Skapa offert</button> -->
+                        <button class="btn btn-primary" (click)="InsertNewOffer()" [disabled]="Rut.totalCost == 0">Skapa offert</button>
                     </div>
                 </div>
             </div>

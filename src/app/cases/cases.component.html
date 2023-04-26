@@ -3,14 +3,15 @@
         <p class="fs-4">Mina offerter</p>
         <div class="col-auto d-flex align-items-end pb-2">
             <button class="btn btn-primary" routerLink="/dashboard/calculate">Skapa offert</button>
-            <button class="btn btn-primary ms-1 position-relative" (click)="downloadPDF()">Ladda ner <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <!-- <button class="btn btn-primary ms-1 position-relative" (click)="downloadPDF()">Ladda ner <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 BETA
-              </span></button>
+              </span></button> -->
+              <button (click)="addOffer()" class="btn btn-primary">Lägg till offert</button>
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col">
             <div  class="card p-0" style="overflow-x:auto;">
@@ -43,7 +44,46 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div  class="card p-0" style="overflow-x:auto;">
+                <table id="table" class="table table-bordered">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th scope="col">Offertnummer</th>
+                            <th scope="col">Skapad</th>
+                            <th scope="col">Genomförd</th>
+                            <th scope="col">Namn</th>
+                            <th scope="col">Adress</th>
+                            <th scope="col">Totalt pris</th>
+                            <th scope="col">Pris efter skattereduktion</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr" *ngFor="let row of testdata">
+                            <td data-cell="Offertnummer">{{row.OfferNumber}}</td>
+                            <td data-cell="Kundens Namn">{{row.CustomerName}}</td>
+                             <!-- <td data-cell="Skapad" class="text-center">{{row.createdDate}}</td>
+                            <td data-cell="Genomförd" class="text-center">{{row.doneDate}}</td>
+                            <td data-cell="Namn">{{row.customerName}}</td>
+                            <td data-cell="Adress">{{row.customerAddress}}</td>
+                            <td data-cell="Totalt pris" class="text-center">{{row.totalCost}}:-</td>
+                            <td data-cell="Pris efter skattereduktion" class="text-center">{{row.totalCostAfterReduction}}:-</td>
+                            <td data-cell="Status" class="text-center"><i class="bi bi-check2 fs-4" *ngIf="row.status"></i><i class="bi bi-x fs-4" *ngIf="!row.status"></i></td>  -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
 
 <ng-template #template>
     <div class="modal-header">

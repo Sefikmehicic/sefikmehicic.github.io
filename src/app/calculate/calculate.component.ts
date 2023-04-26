@@ -2,6 +2,14 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { __values } from 'tslib';
+import { DOComponent, Offer } from '../DataBase/do/do.component';
+import { child, getDatabase, push, ref, set } from 'firebase/database';
+import { initializeApp } from 'firebase/app';
+import { environment } from 'src/environments/environment';
+
+// const app = initializeApp(environment.firebase);
+// const database = getDatabase(app);
+// export const todosRef = ref(database, "Offers");
 
 @Component({
   selector: 'app-calculate',
@@ -14,6 +22,9 @@ export class CalculateComponent implements OnInit {
   type: string = "none";
   customerId: string = "";
   showInfo: boolean = false;
+
+  newOffer = <Offer>{};
+
 
     Customer: customer = {
       name: 'Eva Larsson',
@@ -67,7 +78,7 @@ export class CalculateComponent implements OnInit {
       totalCostAfterReduction: 0
     };
 
-  constructor(private router: Router, private route: ActivatedRoute, private modalService: BsModalService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private modalService: BsModalService, private DOP: DOComponent) { }
 
   typeOfWork(value: any) {
     this.type = value.target.value;
@@ -116,12 +127,18 @@ export class CalculateComponent implements OnInit {
   }
 
   search(): void {
-    if (this.customerId) {
+    if (this.newOffer.CustomerID) {
       this.showInfo = true;
     }
     else {
       this.showInfo = false;
     }
+  }
+
+  InsertNewOffer():void{
+    this.newOffer.customerName = 'TestPerson';
+    this.newOffer.TotalSum = this.Rut.totalCostAfterReduction;
+    this.DOP.SetNewOffer(this.newOffer);
   }
 
   ngOnInit(): void {

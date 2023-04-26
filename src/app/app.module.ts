@@ -15,6 +15,13 @@ import { CalculateComponent } from './calculate/calculate.component';
 import { CasesComponent } from './cases/cases.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './home/Navbar/navbar/navbar.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { DataOperationComponent } from 'src/DataBase/DataOperation';
+import { DOComponent } from './DataBase/do/do.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +35,18 @@ import { NavbarComponent } from './home/Navbar/navbar/navbar.component';
     CalculateComponent,
     CasesComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    DOComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ModalModule,
-    FormsModule 
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()) 
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]

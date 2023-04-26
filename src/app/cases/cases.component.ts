@@ -2,7 +2,17 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
+import { initializeApp } from 'firebase/app';
+import { getDatabase, onValue, ref, set } from "firebase/database";
+import { environment } from 'src/environments/environment';
+import { Database, object } from '@angular/fire/database';
+
 declare var html2pdf: any;
+
+const app = initializeApp(environment.firebase);
+const database = getDatabase(app);
+export const todosRef = ref(database, "Offers");
+
 
 @Component({
   selector: 'app-cases',
@@ -12,6 +22,7 @@ declare var html2pdf: any;
 export class CasesComponent implements OnInit {
   modalRef?: BsModalRef;
   chosenRow!: offerRow;
+  testdata : any[] = [];
 
   offers: offerRow[] = [{
     offerNumber: '1001',
@@ -86,7 +97,26 @@ export class CasesComponent implements OnInit {
     html2pdf().set(opt).from(element).save();
   }
 
+  addOffer(): void{
+    const db = getDatabase();
+    set(ref(db, 'Offers/1003'), {
+      OfferNumber: '1003',
+      CustomerName: 'Lisa Lisa',
+      CustomerAddress: 'Kungsgatan 1, Stockholm'
+    });
+    location.reload();
+  }
+
   ngOnInit(): void {
+
+    const db = getDatabase();
+
+    const Data = ref(db, 'Offers');
+    onValue(Data, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        this.testdata.push(childSnapshot.val());
+      });
+    });
   }
 }
 
